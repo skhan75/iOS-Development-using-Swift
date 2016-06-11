@@ -4,7 +4,11 @@
 //
 //  Created by Sami Ahmad Khan on 6/9/16.
 //  Copyright © 2016 Sami Ahmad Khan. All rights reserved.
-//
+
+//  EXTRAS IMPLEMENTED:
+//  1. Keyboard dismissal
+//  2. Automatic Conversion Direction selection
+//  3. "Insta" Conversions
 
 import UIKit
 

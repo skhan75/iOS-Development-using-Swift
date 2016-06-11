@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     let converterObj = UnitConverter()
     
+    
     @IBAction func unitSegmentSelection(sender: UISegmentedControl) {
         if(unitsSegmentControl.selectedSegmentIndex == 0){
             labelTextTop.text = "°F"
