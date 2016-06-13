@@ -1,4 +1,6 @@
-# CS 442 Code Repository
+Name: Sami Ahmad Khan
+Email Address: skhan75@hawk.iit.edu
+Student ID: A20352677
 
 This private repository is shared between you and the course instructor, and
 will be used to version control and submit machine problems. All machine
