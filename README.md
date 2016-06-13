@@ -6,6 +6,6 @@ Student ID: A20352677
 
 ## MP/01 --> First Machine Problem
 
-Extras implemented : 1. Keyboard dismissal when click outside text label box   
+Extras implemented :   1. Keyboard dismissal when click outside text label box   
                      2. Automatic Conversion Direction selection   
-                     3. "Insta" Conversions   
+                     3. "Insta" Conversions
