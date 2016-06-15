@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5C9926F1D116D7400724743"
+               BlueprintIdentifier = "A5C9928D1D11730D00724743"
                BuildableName = "Improved Unit Converter.app"
                BlueprintName = "Improved Unit Converter"
                ReferencedContainer = "container:Improved Unit Converter.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C9926F1D116D7400724743"
+            BlueprintIdentifier = "A5C9928D1D11730D00724743"
             BuildableName = "Improved Unit Converter.app"
             BlueprintName = "Improved Unit Converter"
             ReferencedContainer = "container:Improved Unit Converter.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C9926F1D116D7400724743"
+            BlueprintIdentifier = "A5C9928D1D11730D00724743"
             BuildableName = "Improved Unit Converter.app"
             BlueprintName = "Improved Unit Converter"
             ReferencedContainer = "container:Improved Unit Converter.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C9926F1D116D7400724743"
+            BlueprintIdentifier = "A5C9928D1D11730D00724743"
             BuildableName = "Improved Unit Converter.app"
             BlueprintName = "Improved Unit Converter"
             ReferencedContainer = "container:Improved Unit Converter.xcodeproj">
