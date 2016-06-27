@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Area</key>
+	<dict>
+		<key>acre</key>
+		<real>247.105</real>
+		<key>hectare</key>
+		<integer>100</integer>
+		<key>square km</key>
+		<integer>1</integer>
+		<key>square mile</key>
+		<real>0.386102</real>
+	</dict>
+	<key>Volume</key>
+	<dict>
+		<key>liter</key>
+		<integer>1000</integer>
+		<key>gallon</key>
+		<real>219.969</real>
+		<key>cubic meter</key>
+		<integer>1</integer>
+		<key>pint</key>
+		<real>1759.75</real>
+		<key>quart</key>
+		<real>879.877</real>
+	</dict>
+	<key>Length</key>
+	<dict>
+		<key>foot</key>
+		<real>3.28084</real>
+		<key>inch</key>
+		<real>39.3701</real>
+		<key>kilometer</key>
+		<real>0.001</real>
+		<key>meter</key>
+		<integer>1</integer>
+		<key>mile</key>
+		<real>0.000621371</real>
+		<key>yard</key>
+		<real>1.09361</real>
+	</dict>
+	<key>Time</key>
+	<dict>
+		<key>day</key>
+		<real>1.157407e-05</real>
+		<key>hour</key>
+		<real>0.000277778</real>
+		<key>millisecond</key>
+		<integer>1000</integer>
+		<key>minute</key>
+		<real>0.0166667</real>
+		<key>second</key>
+		<integer>1</integer>
+		<key>week</key>
+		<real>1.65343e-06</real>
+		<key>year</key>
+		<real>3.16887646e-08</real>
+	</dict>
+	<key>Temperature</key>
+	<dict>
+		<key>Kelvin</key>
+		<array>
+			<integer>1</integer>
+			<integer>0</integer>
+		</array>
+		<key>Celsius</key>
+		<array>
+			<integer>1</integer>
+			<real>273.15</real>
+		</array>
+		<key>Fahrenheit</key>
+		<array>
+			<real>1.8</real>
+			<real>459.67</real>
+		</array>
+	</dict>
+	<key>Base_Types</key>
+	<dict>
+		<key>Area</key>
+		<string>sqaure km</string>
+		<key>Length</key>
+		<string>meter</string>
+		<key>Temperature</key>
+		<string>Kelvin</string>
+		<key>Time</key>
+		<string>seconds</string>
+		<key>Volume</key>
+		<string>cubic meter</string>
+	</dict>
+	<key>Categories</key>
+	<array>
+		<string>Area</string>
+		<string>Length</string>
+		<string>Temperature</string>
+		<string>Time</string>
+		<string>Volume</string>
+	</array>
+</dict>
+</plist>
