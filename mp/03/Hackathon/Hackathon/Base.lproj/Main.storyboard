@@ -24,6 +24,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="20" width="360" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gb2-U3-E7s"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yPy-Y5-FmV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -31,6 +34,10 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="58" width="360" height="522"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WXF-Mz-4fj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ELG-EP-EdI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -47,6 +54,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yPy-Y5-FmV" id="zgc-1Z-C9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
