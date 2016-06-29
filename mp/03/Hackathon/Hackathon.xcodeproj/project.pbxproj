@@ -13,6 +13,7 @@
 		A52CE4F91D2278B900E79F2F /* Hackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A52CE4F71D2278B900E79F2F /* Hackathon.xcdatamodeld */; };
 		A52CE4FB1D2278B900E79F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52CE4FA1D2278B900E79F2F /* Assets.xcassets */; };
 		A52CE4FE1D2278B900E79F2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52CE4FC1D2278B900E79F2F /* LaunchScreen.storyboard */; };
+		A5F8AE281D2340350004C015 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F8AE271D2340350004C015 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		A52CE4FA1D2278B900E79F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52CE4FD1D2278B900E79F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52CE4FF1D2278B900E79F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52CE5051D228EB500E79F2F /* bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		A5F8AE271D2340350004C015 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A5F8AE291D234E9D0004C015 /* CameraViolations.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = CameraViolations.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F8AE281D2340350004C015 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 		A52CE4E41D2278B800E79F2F = {
 			isa = PBXGroup;
 			children = (
+				A5F8AE271D2340350004C015 /* libsqlite3.tbd */,
 				A52CE4EF1D2278B800E79F2F /* Hackathon */,
 				A52CE4EE1D2278B800E79F2F /* Products */,
 			);
@@ -60,6 +66,8 @@
 				A52CE4F21D2278B800E79F2F /* ViewController.swift */,
 				A52CE4F41D2278B900E79F2F /* Main.storyboard */,
 				A52CE4FA1D2278B900E79F2F /* Assets.xcassets */,
+				A52CE5051D228EB500E79F2F /* bridging-header.h */,
+				A5F8AE291D234E9D0004C015 /* CameraViolations.db */,
 				A52CE4FC1D2278B900E79F2F /* LaunchScreen.storyboard */,
 				A52CE4FF1D2278B900E79F2F /* Info.plist */,
 				A52CE4F71D2278B900E79F2F /* Hackathon.xcdatamodeld */,
@@ -255,8 +263,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hackathon",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sami.iit.edu.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Hackathon/bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -266,6 +279,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Hackathon",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sami.iit.edu.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -290,6 +307,7 @@
 				A52CE5041D2278B900E79F2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

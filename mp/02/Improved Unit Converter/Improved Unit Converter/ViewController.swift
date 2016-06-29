@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var backgroundImageView: UIImageView?
+    var tableView : UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -17,6 +17,7 @@
 		A51889151D176A6700A6F858 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51889141D176A6700A6F858 /* UnitConverter.swift */; };
 		A51889171D176E6200A6F858 /* ConversionInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A51889161D176E6200A6F858 /* ConversionInfo.plist */; };
 		A52917CF1D169BC700DA849F /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52917CE1D169BC700DA849F /* DetailTableViewController.swift */; };
+		A5D4C1F91D23E7610096ED2F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5D4C1F81D23E7610096ED2F /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A51889141D176A6700A6F858 /* UnitConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
 		A51889161D176E6200A6F858 /* ConversionInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConversionInfo.plist; sourceTree = "<group>"; };
 		A52917CE1D169BC700DA849F /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewController.swift; path = ../DetailTableViewController.swift; sourceTree = "<group>"; };
+		A5D4C1F81D23E7610096ED2F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = "../../../../../../../Downloads/SQLite3-master/SQLite3/background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				A5027AA51D154D4900BE43FC /* AppDelegate.swift */,
 				A52917CE1D169BC700DA849F /* DetailTableViewController.swift */,
 				A5027AA71D154D4900BE43FC /* ViewController.swift */,
+				A5D4C1F81D23E7610096ED2F /* background.jpg */,
 				A5027AA91D154D4900BE43FC /* Main.storyboard */,
 				A51889141D176A6700A6F858 /* UnitConverter.swift */,
 				A51889161D176E6200A6F858 /* ConversionInfo.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51889171D176E6200A6F858 /* ConversionInfo.plist in Resources */,
+				A5D4C1F91D23E7610096ED2F /* background.jpg in Resources */,
 				A5027AB01D154D4900BE43FC /* LaunchScreen.storyboard in Resources */,
 				A5027AAD1D154D4900BE43FC /* Assets.xcassets in Resources */,
 				A5027AAB1D154D4900BE43FC /* Main.storyboard in Resources */,
