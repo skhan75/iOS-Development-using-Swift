@@ -7,70 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A52CE4F11D2278B800E79F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CE4F01D2278B800E79F2F /* AppDelegate.swift */; };
-		A52CE4F31D2278B800E79F2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CE4F21D2278B800E79F2F /* ViewController.swift */; };
-		A52CE4F61D2278B900E79F2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52CE4F41D2278B900E79F2F /* Main.storyboard */; };
-		A52CE4F91D2278B900E79F2F /* Hackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A52CE4F71D2278B900E79F2F /* Hackathon.xcdatamodeld */; };
-		A52CE4FB1D2278B900E79F2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52CE4FA1D2278B900E79F2F /* Assets.xcassets */; };
-		A52CE4FE1D2278B900E79F2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52CE4FC1D2278B900E79F2F /* LaunchScreen.storyboard */; };
-		A5F8AE281D2340350004C015 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F8AE271D2340350004C015 /* libsqlite3.tbd */; };
+		A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */; };
+		A51FE7FC1D2408D4004A1F19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE7FB1D2408D4004A1F19 /* ViewController.swift */; };
+		A51FE7FF1D2408D4004A1F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FE7FD1D2408D4004A1F19 /* Main.storyboard */; };
+		A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8001D2408D4004A1F19 /* Hackathon.xcdatamodeld */; };
+		A51FE8041D2408D4004A1F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8031D2408D4004A1F19 /* Assets.xcassets */; };
+		A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */; };
+		A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE80E1D240919004A1F19 /* TableViewController.swift */; };
+		A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8101D24099C004A1F19 /* TableViewCell.swift */; };
+		A5E87C6B1D246E6B0015E764 /* MenuItems+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */; };
+		A5E87C6C1D246E6B0015E764 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E87C6A1D246E6B0015E764 /* MenuItems.swift */; };
+		A5E87C6E1D246FA90015E764 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */; };
+		A5E87C721D249C880015E764 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E87C701D249C880015E764 /* LaunchScreen.xib */; };
+		A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */ = {isa = PBXBuildFile; fileRef = A5E87C731D24D9BB0015E764 /* CameraViolations.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A52CE4ED1D2278B800E79F2F /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A52CE4F01D2278B800E79F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A52CE4F21D2278B800E79F2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A52CE4F51D2278B900E79F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A52CE4F81D2278B900E79F2F /* Hackathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hackathon.xcdatamodel; sourceTree = "<group>"; };
-		A52CE4FA1D2278B900E79F2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A52CE4FD1D2278B900E79F2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A52CE4FF1D2278B900E79F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A52CE5051D228EB500E79F2F /* bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
-		A5F8AE271D2340350004C015 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A5F8AE291D234E9D0004C015 /* CameraViolations.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = CameraViolations.db; sourceTree = "<group>"; };
+		A51FE7F61D2408D4004A1F19 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A51FE7FB1D2408D4004A1F19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A51FE7FE1D2408D4004A1F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A51FE8011D2408D4004A1F19 /* Hackathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hackathon.xcdatamodel; sourceTree = "<group>"; };
+		A51FE8031D2408D4004A1F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A51FE8061D2408D4004A1F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A51FE8081D2408D4004A1F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51FE80E1D240919004A1F19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A51FE8101D24099C004A1F19 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A5E87C661D246D590015E764 /* bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItems+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5E87C6A1D246E6B0015E764 /* MenuItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
+		A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A5E87C711D249C880015E764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A5E87C731D24D9BB0015E764 /* CameraViolations.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = CameraViolations.db; path = Hackathon/CameraViolations.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A52CE4EA1D2278B800E79F2F /* Frameworks */ = {
+		A51FE7F31D2408D4004A1F19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F8AE281D2340350004C015 /* libsqlite3.tbd in Frameworks */,
+				A5E87C6E1D246FA90015E764 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A52CE4E41D2278B800E79F2F = {
+		A51FE7ED1D2408D4004A1F19 = {
 			isa = PBXGroup;
 			children = (
-				A5F8AE271D2340350004C015 /* libsqlite3.tbd */,
-				A52CE4EF1D2278B800E79F2F /* Hackathon */,
-				A52CE4EE1D2278B800E79F2F /* Products */,
+				A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */,
+				A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */,
+				A5E87C731D24D9BB0015E764 /* CameraViolations.db */,
+				A5E87C6A1D246E6B0015E764 /* MenuItems.swift */,
+				A51FE7F81D2408D4004A1F19 /* Hackathon */,
+				A51FE7F71D2408D4004A1F19 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A52CE4EE1D2278B800E79F2F /* Products */ = {
+		A51FE7F71D2408D4004A1F19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A52CE4ED1D2278B800E79F2F /* Hackathon.app */,
+				A51FE7F61D2408D4004A1F19 /* Hackathon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A52CE4EF1D2278B800E79F2F /* Hackathon */ = {
+		A51FE7F81D2408D4004A1F19 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				A52CE4F01D2278B800E79F2F /* AppDelegate.swift */,
-				A52CE4F21D2278B800E79F2F /* ViewController.swift */,
-				A52CE4F41D2278B900E79F2F /* Main.storyboard */,
-				A52CE4FA1D2278B900E79F2F /* Assets.xcassets */,
-				A52CE5051D228EB500E79F2F /* bridging-header.h */,
-				A5F8AE291D234E9D0004C015 /* CameraViolations.db */,
-				A52CE4FC1D2278B900E79F2F /* LaunchScreen.storyboard */,
-				A52CE4FF1D2278B900E79F2F /* Info.plist */,
-				A52CE4F71D2278B900E79F2F /* Hackathon.xcdatamodeld */,
+				A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */,
+				A51FE7FB1D2408D4004A1F19 /* ViewController.swift */,
+				A5E87C701D249C880015E764 /* LaunchScreen.xib */,
+				A51FE7FD1D2408D4004A1F19 /* Main.storyboard */,
+				A51FE80E1D240919004A1F19 /* TableViewController.swift */,
+				A5E87C661D246D590015E764 /* bridging-header.h */,
+				A51FE8101D24099C004A1F19 /* TableViewCell.swift */,
+				A51FE8031D2408D4004A1F19 /* Assets.xcassets */,
+				A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */,
+				A51FE8081D2408D4004A1F19 /* Info.plist */,
+				A51FE8001D2408D4004A1F19 /* Hackathon.xcdatamodeld */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -78,13 +94,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A52CE4EC1D2278B800E79F2F /* Hackathon */ = {
+		A51FE7F51D2408D4004A1F19 /* Hackathon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A52CE5021D2278B900E79F2F /* Build configuration list for PBXNativeTarget "Hackathon" */;
+			buildConfigurationList = A51FE80B1D2408D4004A1F19 /* Build configuration list for PBXNativeTarget "Hackathon" */;
 			buildPhases = (
-				A52CE4E91D2278B800E79F2F /* Sources */,
-				A52CE4EA1D2278B800E79F2F /* Frameworks */,
-				A52CE4EB1D2278B800E79F2F /* Resources */,
+				A51FE7F21D2408D4004A1F19 /* Sources */,
+				A51FE7F31D2408D4004A1F19 /* Frameworks */,
+				A51FE7F41D2408D4004A1F19 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,25 +108,25 @@
 			);
 			name = Hackathon;
 			productName = Hackathon;
-			productReference = A52CE4ED1D2278B800E79F2F /* Hackathon.app */;
+			productReference = A51FE7F61D2408D4004A1F19 /* Hackathon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A52CE4E51D2278B800E79F2F /* Project object */ = {
+		A51FE7EE1D2408D4004A1F19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Sami Ahmad Khan";
 				TargetAttributes = {
-					A52CE4EC1D2278B800E79F2F = {
+					A51FE7F51D2408D4004A1F19 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = A52CE4E81D2278B800E79F2F /* Build configuration list for PBXProject "Hackathon" */;
+			buildConfigurationList = A51FE7F11D2408D4004A1F19 /* Build configuration list for PBXProject "Hackathon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,63 +134,77 @@
 				en,
 				Base,
 			);
-			mainGroup = A52CE4E41D2278B800E79F2F;
-			productRefGroup = A52CE4EE1D2278B800E79F2F /* Products */;
+			mainGroup = A51FE7ED1D2408D4004A1F19;
+			productRefGroup = A51FE7F71D2408D4004A1F19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A52CE4EC1D2278B800E79F2F /* Hackathon */,
+				A51FE7F51D2408D4004A1F19 /* Hackathon */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A52CE4EB1D2278B800E79F2F /* Resources */ = {
+		A51FE7F41D2408D4004A1F19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52CE4FE1D2278B900E79F2F /* LaunchScreen.storyboard in Resources */,
-				A52CE4FB1D2278B900E79F2F /* Assets.xcassets in Resources */,
-				A52CE4F61D2278B900E79F2F /* Main.storyboard in Resources */,
+				A5E87C721D249C880015E764 /* LaunchScreen.xib in Resources */,
+				A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */,
+				A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */,
+				A51FE8041D2408D4004A1F19 /* Assets.xcassets in Resources */,
+				A51FE7FF1D2408D4004A1F19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A52CE4E91D2278B800E79F2F /* Sources */ = {
+		A51FE7F21D2408D4004A1F19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52CE4F31D2278B800E79F2F /* ViewController.swift in Sources */,
-				A52CE4F11D2278B800E79F2F /* AppDelegate.swift in Sources */,
-				A52CE4F91D2278B900E79F2F /* Hackathon.xcdatamodeld in Sources */,
+				A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */,
+				A51FE7FC1D2408D4004A1F19 /* ViewController.swift in Sources */,
+				A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */,
+				A5E87C6B1D246E6B0015E764 /* MenuItems+CoreDataProperties.swift in Sources */,
+				A5E87C6C1D246E6B0015E764 /* MenuItems.swift in Sources */,
+				A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */,
+				A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A52CE4F41D2278B900E79F2F /* Main.storyboard */ = {
+		A51FE7FD1D2408D4004A1F19 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A52CE4F51D2278B900E79F2F /* Base */,
+				A51FE7FE1D2408D4004A1F19 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A52CE4FC1D2278B900E79F2F /* LaunchScreen.storyboard */ = {
+		A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A52CE4FD1D2278B900E79F2F /* Base */,
+				A51FE8061D2408D4004A1F19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5E87C701D249C880015E764 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5E87C711D249C880015E764 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A52CE5001D2278B900E79F2F /* Debug */ = {
+		A51FE8091D2408D4004A1F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		A52CE5011D2278B900E79F2F /* Release */ = {
+		A51FE80A1D2408D4004A1F19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,32 +287,24 @@
 			};
 			name = Release;
 		};
-		A52CE5031D2278B900E79F2F /* Debug */ = {
+		A51FE80C1D2408D4004A1F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Hackathon",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = sami.iit.edu.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Hackathon/bridging-header.h";
 			};
 			name = Debug;
 		};
-		A52CE5041D2278B900E79F2F /* Release */ = {
+		A51FE80D1D2408D4004A1F19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Hackathon",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = sami.iit.edu.Hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -291,20 +313,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A52CE4E81D2278B800E79F2F /* Build configuration list for PBXProject "Hackathon" */ = {
+		A51FE7F11D2408D4004A1F19 /* Build configuration list for PBXProject "Hackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A52CE5001D2278B900E79F2F /* Debug */,
-				A52CE5011D2278B900E79F2F /* Release */,
+				A51FE8091D2408D4004A1F19 /* Debug */,
+				A51FE80A1D2408D4004A1F19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A52CE5021D2278B900E79F2F /* Build configuration list for PBXNativeTarget "Hackathon" */ = {
+		A51FE80B1D2408D4004A1F19 /* Build configuration list for PBXNativeTarget "Hackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A52CE5031D2278B900E79F2F /* Debug */,
-				A52CE5041D2278B900E79F2F /* Release */,
+				A51FE80C1D2408D4004A1F19 /* Debug */,
+				A51FE80D1D2408D4004A1F19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -312,17 +334,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A52CE4F71D2278B900E79F2F /* Hackathon.xcdatamodeld */ = {
+		A51FE8001D2408D4004A1F19 /* Hackathon.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A52CE4F81D2278B900E79F2F /* Hackathon.xcdatamodel */,
+				A51FE8011D2408D4004A1F19 /* Hackathon.xcdatamodel */,
 			);
-			currentVersion = A52CE4F81D2278B900E79F2F /* Hackathon.xcdatamodel */;
+			currentVersion = A51FE8011D2408D4004A1F19 /* Hackathon.xcdatamodel */;
 			path = Hackathon.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = A52CE4E51D2278B800E79F2F /* Project object */;
+	rootObject = A51FE7EE1D2408D4004A1F19 /* Project object */;
 }

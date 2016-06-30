@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Hackathon
 //
-//  Created by Sami Ahmad Khan on 6/28/16.
+//  Created by Sami Ahmad Khan on 6/29/16.
 //  Copyright © 2016 Sami Ahmad Khan. All rights reserved.
 //
 
@@ -17,7 +17,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NSThread.sleepForTimeInterval(2);
+        loadIntoCoredata()
         return true
+    }
+    
+    func loadIntoCoredata() {
+        
+        var dbPath: String!
+        var db: COpaquePointer = nil
+        var todoItems = [(String, String)]()
+        dbPath = NSBundle.mainBundle().pathForResource("CameraViolations", ofType: "db")!
+       
+        // OPEN DATABASE
+        
+            //var db: COpaquePointer = nil
+            if sqlite3_open(dbPath, &db) == SQLITE_OK {
+                print("Database opened")
+            } else {
+                print("Database Not Found !")
+            }
+        
+        
+        let queryStatementString = "SELECT * FROM CameraViolations;"
+        
+        //QUERY A DATABASE
+        
+            var queryStatement: COpaquePointer = nil
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                todoItems = []
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    let address = sqlite3_column_text(queryStatement, 0)
+                    let cameraID = sqlite3_column_text(queryStatement, 1)
+                    let text = String.fromCString(UnsafePointer<CChar>(address))!
+                    todoItems.append((String(address), text))
+                    print("\(address) | \(text)")
+                }
+            }
+            sqlite3_finalize(queryStatement)
+        
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -59,7 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-       
+        // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
+        // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
@@ -73,7 +113,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             dict[NSUnderlyingErrorKey] = error as NSError
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            
+            // Replace this with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
             abort()
         }
