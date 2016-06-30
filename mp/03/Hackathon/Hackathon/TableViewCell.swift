@@ -11,8 +11,7 @@ import CoreData
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cameraID: UILabel!
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var violations: UILabel!
+    @IBOutlet weak var days: UILabel!
+    
     
 }

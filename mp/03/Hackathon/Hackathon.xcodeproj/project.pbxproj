@@ -15,10 +15,13 @@
 		A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */; };
 		A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE80E1D240919004A1F19 /* TableViewController.swift */; };
 		A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8101D24099C004A1F19 /* TableViewCell.swift */; };
-		A5E87C6B1D246E6B0015E764 /* MenuItems+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */; };
-		A5E87C6C1D246E6B0015E764 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E87C6A1D246E6B0015E764 /* MenuItems.swift */; };
+		A5E3EAE61D25156B0095BFA9 /* CameraID+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */; };
+		A5E3EAE71D25156B0095BFA9 /* CameraID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE11D25156B0095BFA9 /* CameraID.swift */; };
+		A5E3EAE81D25156B0095BFA9 /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */; };
+		A5E3EAE91D25156B0095BFA9 /* Locatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE31D25156B0095BFA9 /* Locatable.swift */; };
+		A5E3EAEE1D2515B00095BFA9 /* Violations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */; };
+		A5E3EAEF1D2515B00095BFA9 /* Violations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAED1D2515B00095BFA9 /* Violations.swift */; };
 		A5E87C6E1D246FA90015E764 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */; };
-		A5E87C721D249C880015E764 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E87C701D249C880015E764 /* LaunchScreen.xib */; };
 		A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */ = {isa = PBXBuildFile; fileRef = A5E87C731D24D9BB0015E764 /* CameraViolations.db */; };
 /* End PBXBuildFile section */
 
@@ -33,11 +36,14 @@
 		A51FE8081D2408D4004A1F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51FE80E1D240919004A1F19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A51FE8101D24099C004A1F19 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraID+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5E3EAE11D25156B0095BFA9 /* CameraID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraID.swift; sourceTree = "<group>"; };
+		A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locatable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5E3EAE31D25156B0095BFA9 /* Locatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locatable.swift; sourceTree = "<group>"; };
+		A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Violations+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5E3EAED1D2515B00095BFA9 /* Violations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Violations.swift; sourceTree = "<group>"; };
 		A5E87C661D246D590015E764 /* bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
-		A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuItems+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A5E87C6A1D246E6B0015E764 /* MenuItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A5E87C711D249C880015E764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A5E87C731D24D9BB0015E764 /* CameraViolations.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = CameraViolations.db; path = Hackathon/CameraViolations.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,10 +62,14 @@
 		A51FE7ED1D2408D4004A1F19 = {
 			isa = PBXGroup;
 			children = (
+				A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */,
+				A5E3EAED1D2515B00095BFA9 /* Violations.swift */,
+				A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */,
+				A5E3EAE11D25156B0095BFA9 /* CameraID.swift */,
+				A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */,
+				A5E3EAE31D25156B0095BFA9 /* Locatable.swift */,
 				A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */,
-				A5E87C691D246E6B0015E764 /* MenuItems+CoreDataProperties.swift */,
 				A5E87C731D24D9BB0015E764 /* CameraViolations.db */,
-				A5E87C6A1D246E6B0015E764 /* MenuItems.swift */,
 				A51FE7F81D2408D4004A1F19 /* Hackathon */,
 				A51FE7F71D2408D4004A1F19 /* Products */,
 			);
@@ -78,7 +88,6 @@
 			children = (
 				A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */,
 				A51FE7FB1D2408D4004A1F19 /* ViewController.swift */,
-				A5E87C701D249C880015E764 /* LaunchScreen.xib */,
 				A51FE7FD1D2408D4004A1F19 /* Main.storyboard */,
 				A51FE80E1D240919004A1F19 /* TableViewController.swift */,
 				A5E87C661D246D590015E764 /* bridging-header.h */,
@@ -149,7 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E87C721D249C880015E764 /* LaunchScreen.xib in Resources */,
 				A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */,
 				A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */,
 				A51FE8041D2408D4004A1F19 /* Assets.xcassets in Resources */,
@@ -164,11 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E3EAEF1D2515B00095BFA9 /* Violations.swift in Sources */,
+				A5E3EAE71D25156B0095BFA9 /* CameraID.swift in Sources */,
 				A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */,
 				A51FE7FC1D2408D4004A1F19 /* ViewController.swift in Sources */,
+				A5E3EAE91D25156B0095BFA9 /* Locatable.swift in Sources */,
+				A5E3EAE81D25156B0095BFA9 /* Locatable+CoreDataProperties.swift in Sources */,
+				A5E3EAEE1D2515B00095BFA9 /* Violations+CoreDataProperties.swift in Sources */,
 				A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */,
-				A5E87C6B1D246E6B0015E764 /* MenuItems+CoreDataProperties.swift in Sources */,
-				A5E87C6C1D246E6B0015E764 /* MenuItems.swift in Sources */,
+				A5E3EAE61D25156B0095BFA9 /* CameraID+CoreDataProperties.swift in Sources */,
 				A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */,
 				A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */,
 			);
@@ -191,14 +203,6 @@
 				A51FE8061D2408D4004A1F19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A5E87C701D249C880015E764 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5E87C711D249C880015E764 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -16,12 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        NSThread.sleepForTimeInterval(2);
+        
+        NSThread.sleepForTimeInterval(2); // For delaying launch screen
+        
         loadIntoCoredata()
         return true
     }
     
+    //Function to load SQLite Database into Core Data
     func loadIntoCoredata() {
         
         var dbPath: String!
@@ -29,57 +31,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var todoItems = [(String, String)]()
         dbPath = NSBundle.mainBundle().pathForResource("CameraViolations", ofType: "db")!
        
+        
         // OPEN DATABASE
         
-            //var db: COpaquePointer = nil
-            if sqlite3_open(dbPath, &db) == SQLITE_OK {
-                print("Database opened")
-            } else {
-                print("Database Not Found !")
-            }
+        if sqlite3_open(dbPath, &db) == SQLITE_OK {
+            print("Database opened")
+        }
+        else {
+            print("Database Not Found !")
+        }
         
         
         let queryStatementString = "SELECT * FROM CameraViolations;"
         
+        
         //QUERY A DATABASE
         
-            var queryStatement: COpaquePointer = nil
-            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
-                todoItems = []
-                while sqlite3_step(queryStatement) == SQLITE_ROW {
-                    let address = sqlite3_column_text(queryStatement, 0)
-                    let cameraID = sqlite3_column_text(queryStatement, 1)
-                    let text = String.fromCString(UnsafePointer<CChar>(address))!
-                    todoItems.append((String(address), text))
-                    print("\(address) | \(text)")
-                }
-            }
-            sqlite3_finalize(queryStatement)
+        var queryStatement: COpaquePointer = nil
         
-
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+        todoItems = []
+        
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                
+                let address = sqlite3_column_text(queryStatement, 0)
+                let addressText = String.fromCString(UnsafePointer<CChar>(address))!
+                
+                let cameraID = sqlite3_column_text(queryStatement, 1)
+                let cameraIDText = String.fromCString(UnsafePointer<CChar>(cameraID))!
+                
+                let violationDate = sqlite3_column_text(queryStatement, 2)
+                let violationDateText = String.fromCString(UnsafePointer<CChar>(violationDate))!
+                
+                let violations = sqlite3_column_text(queryStatement, 3)
+                let violationsText = String.fromCString(UnsafePointer<CChar>(violations))!
+                
+                let latitude = sqlite3_column_text(queryStatement, 6)
+                let latText = String.fromCString(UnsafePointer<CChar>(latitude))!
+                
+                let longitude = sqlite3_column_text(queryStatement, 7)
+                let longText = String.fromCString(UnsafePointer<CChar>(longitude))!
+                
+                
+                todoItems.append((String(addressText), cameraIDText))
+                print("\(addressText) | \(cameraIDText)")
+            }
+        }
+        sqlite3_finalize(queryStatement)
     }
 
     func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
 

@@ -12,42 +12,13 @@ import Foundation
 
 class TableViewController: UITableViewController {
     
-    
-    
-    private var menuItems:[MenuItems] = []
-    //private var database: FMDatabase!
+    //private var menuItems:[MenuItems] = []
+    var managedObjectContext: NSManagedObjectContext? = nil
     var fetchResultController:NSFetchedResultsController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
-        // Load menu items from database
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
-            
-            let fetchRequest = NSFetchRequest(entityName: "MenuItems")
-            
-            do {
-                menuItems = try managedObjectContext.executeFetchRequest(fetchRequest) as! [MenuItems]
-            }
-            catch {
-                print("Failed to retrieve record")
-                print(error)
-            }
-        }
-        
-        // Make the cell self size
-        tableView.estimatedRowHeight = 66.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-
-        
-        //let dirs = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .AllDomainsMask, true) as [NSString]
-        //dbPath = NSBundle.mainBundle().pathForResource("CameraViolations", ofType: "db")!
-        //dbPath = dirs.stringByAppendingPathComponent("CameraViolations.db")
-       
-
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,9 +26,7 @@ class TableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
 
-    
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -67,16 +36,16 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(menuItems.count)
-        return menuItems.count
+        //print(menuItems.count)
+        return 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
         
-        cell.cameraID!.text = menuItems[indexPath.row].cameraID
-        cell.date!.text = menuItems[indexPath.row].violationDate
-        cell.violations!.text = "$\(menuItems[indexPath.row].violations) as! Double)"
+        cell.days.text = "11/11/2016"//menuItems[indexPath.row].cameraID
+       /// cell.date!.text = "12.11.2016"//menuItems[indexPath.row].violationDate
+        //cell.violations!.text = "11"//"$\(menuItems[indexPath.row].violations) as! Double)"
         return cell
     }
 
