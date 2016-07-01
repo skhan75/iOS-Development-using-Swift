@@ -1,5 +1,5 @@
 //
-//  CameraID+CoreDataProperties.swift
+//  Date+CoreDataProperties.swift
 //  Hackathon
 //
 //  Created by Sami Ahmad Khan on 6/30/16.
@@ -12,10 +12,10 @@
 import Foundation
 import CoreData
 
-extension CameraID {
+extension Date {
 
-    @NSManaged var cameraID: String?
-    @NSManaged var locatedAt: Locatable?//NSManagedObject?
-    @NSManaged var noOfViolations: NSSet?
+    @NSManaged var violationDate: String?
+    @NSManaged var atLocations: NSSet?
+    @NSManaged var violations: Violations?
 
 }

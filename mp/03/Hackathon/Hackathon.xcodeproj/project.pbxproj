@@ -15,12 +15,12 @@
 		A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */; };
 		A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE80E1D240919004A1F19 /* TableViewController.swift */; };
 		A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8101D24099C004A1F19 /* TableViewCell.swift */; };
-		A5E3EAE61D25156B0095BFA9 /* CameraID+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */; };
-		A5E3EAE71D25156B0095BFA9 /* CameraID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE11D25156B0095BFA9 /* CameraID.swift */; };
-		A5E3EAE81D25156B0095BFA9 /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */; };
-		A5E3EAE91D25156B0095BFA9 /* Locatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAE31D25156B0095BFA9 /* Locatable.swift */; };
-		A5E3EAEE1D2515B00095BFA9 /* Violations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */; };
-		A5E3EAEF1D2515B00095BFA9 /* Violations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3EAED1D2515B00095BFA9 /* Violations.swift */; };
+		A58101801D25D9DA00F93ABC /* Violations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017A1D25D9DA00F93ABC /* Violations+CoreDataProperties.swift */; };
+		A58101811D25D9DA00F93ABC /* Violations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017B1D25D9DA00F93ABC /* Violations.swift */; };
+		A58101821D25D9DA00F93ABC /* Date+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017C1D25D9DA00F93ABC /* Date+CoreDataProperties.swift */; };
+		A58101831D25D9DA00F93ABC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017D1D25D9DA00F93ABC /* Date.swift */; };
+		A58101841D25D9DA00F93ABC /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017E1D25D9DA00F93ABC /* Locatable+CoreDataProperties.swift */; };
+		A58101851D25D9DA00F93ABC /* Locatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581017F1D25D9DA00F93ABC /* Locatable.swift */; };
 		A5E87C6E1D246FA90015E764 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */; };
 		A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */ = {isa = PBXBuildFile; fileRef = A5E87C731D24D9BB0015E764 /* CameraViolations.db */; };
 /* End PBXBuildFile section */
@@ -36,12 +36,12 @@
 		A51FE8081D2408D4004A1F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51FE80E1D240919004A1F19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A51FE8101D24099C004A1F19 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraID+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A5E3EAE11D25156B0095BFA9 /* CameraID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraID.swift; sourceTree = "<group>"; };
-		A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locatable+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A5E3EAE31D25156B0095BFA9 /* Locatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locatable.swift; sourceTree = "<group>"; };
-		A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Violations+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A5E3EAED1D2515B00095BFA9 /* Violations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Violations.swift; sourceTree = "<group>"; };
+		A581017A1D25D9DA00F93ABC /* Violations+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Violations+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A581017B1D25D9DA00F93ABC /* Violations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Violations.swift; sourceTree = "<group>"; };
+		A581017C1D25D9DA00F93ABC /* Date+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A581017D1D25D9DA00F93ABC /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A581017E1D25D9DA00F93ABC /* Locatable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locatable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A581017F1D25D9DA00F93ABC /* Locatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locatable.swift; sourceTree = "<group>"; };
 		A5E87C661D246D590015E764 /* bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
 		A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A5E87C731D24D9BB0015E764 /* CameraViolations.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = CameraViolations.db; path = Hackathon/CameraViolations.db; sourceTree = "<group>"; };
@@ -62,12 +62,12 @@
 		A51FE7ED1D2408D4004A1F19 = {
 			isa = PBXGroup;
 			children = (
-				A5E3EAEC1D2515B00095BFA9 /* Violations+CoreDataProperties.swift */,
-				A5E3EAED1D2515B00095BFA9 /* Violations.swift */,
-				A5E3EAE01D25156B0095BFA9 /* CameraID+CoreDataProperties.swift */,
-				A5E3EAE11D25156B0095BFA9 /* CameraID.swift */,
-				A5E3EAE21D25156B0095BFA9 /* Locatable+CoreDataProperties.swift */,
-				A5E3EAE31D25156B0095BFA9 /* Locatable.swift */,
+				A581017A1D25D9DA00F93ABC /* Violations+CoreDataProperties.swift */,
+				A581017B1D25D9DA00F93ABC /* Violations.swift */,
+				A581017C1D25D9DA00F93ABC /* Date+CoreDataProperties.swift */,
+				A581017D1D25D9DA00F93ABC /* Date.swift */,
+				A581017E1D25D9DA00F93ABC /* Locatable+CoreDataProperties.swift */,
+				A581017F1D25D9DA00F93ABC /* Locatable.swift */,
 				A5E87C6D1D246FA90015E764 /* libsqlite3.tbd */,
 				A5E87C731D24D9BB0015E764 /* CameraViolations.db */,
 				A51FE7F81D2408D4004A1F19 /* Hackathon */,
@@ -172,17 +172,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E3EAEF1D2515B00095BFA9 /* Violations.swift in Sources */,
-				A5E3EAE71D25156B0095BFA9 /* CameraID.swift in Sources */,
 				A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */,
+				A58101821D25D9DA00F93ABC /* Date+CoreDataProperties.swift in Sources */,
+				A58101811D25D9DA00F93ABC /* Violations.swift in Sources */,
 				A51FE7FC1D2408D4004A1F19 /* ViewController.swift in Sources */,
-				A5E3EAE91D25156B0095BFA9 /* Locatable.swift in Sources */,
-				A5E3EAE81D25156B0095BFA9 /* Locatable+CoreDataProperties.swift in Sources */,
-				A5E3EAEE1D2515B00095BFA9 /* Violations+CoreDataProperties.swift in Sources */,
 				A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */,
-				A5E3EAE61D25156B0095BFA9 /* CameraID+CoreDataProperties.swift in Sources */,
+				A58101801D25D9DA00F93ABC /* Violations+CoreDataProperties.swift in Sources */,
 				A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */,
+				A58101841D25D9DA00F93ABC /* Locatable+CoreDataProperties.swift in Sources */,
+				A58101831D25D9DA00F93ABC /* Date.swift in Sources */,
 				A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */,
+				A58101851D25D9DA00F93ABC /* Locatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

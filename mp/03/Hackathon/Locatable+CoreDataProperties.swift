@@ -17,6 +17,10 @@ extension Locatable {
     @NSManaged var address: String?
     @NSManaged var latitude: NSNumber?
     @NSManaged var longitude: NSNumber?
-    @NSManaged var cameras: CameraID?
-
+    @NSManaged var cameraID: String?
+    @NSManaged var atDates: NSSet?
+    
+    func addDates(date :Date) {
+        self.mutableSetValueForKey("atDates").addObject(date)
+    }
 }

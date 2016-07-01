@@ -15,7 +15,6 @@ import CoreData
 extension Violations {
 
     @NSManaged var noOfViolations: NSNumber?
-    @NSManaged var violationDate: String?
-    @NSManaged var violationsForCamID: CameraID?
+    @NSManaged var forDate: NSManagedObject?
 
 }

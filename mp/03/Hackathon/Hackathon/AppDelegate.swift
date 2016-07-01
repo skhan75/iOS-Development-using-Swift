@@ -19,13 +19,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread.sleepForTimeInterval(2); // For delaying launch screen
         
-        loadIntoCoredata()
+        //loadIntoCoredata()
         return true
+    }
+    
+    func fetchRequest(entity: String, attribute: String ,value: String) -> [AnyObject] {
+        let fetchObj = NSFetchRequest(entityName: entity)
+        let predicate = NSPredicate(format: "\(attribute) == %@", value)
+        fetchObj.predicate = predicate
+        
+        var array = [AnyObject]()
+        
+        do{
+            try array = self.managedObjectContext.executeFetchRequest(fetchObj)
+            
+        }catch{
+            print("Unable to fetch object from Core Data")
+        }
+        
+        return array
     }
     
     //Function to load SQLite Database into Core Data
     func loadIntoCoredata() {
         
+        let dictForEntities: NSMutableDictionary = NSMutableDictionary()
         var dbPath: String!
         var db: COpaquePointer = nil
         var todoItems = [(String, String)]()
@@ -52,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
         todoItems = []
         
+            let managedObjectContext = self.managedObjectContext
+            
             while sqlite3_step(queryStatement) == SQLITE_ROW {
                 
                 let address = sqlite3_column_text(queryStatement, 0)
@@ -72,9 +92,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let longitude = sqlite3_column_text(queryStatement, 7)
                 let longText = String.fromCString(UnsafePointer<CChar>(longitude))!
                 
+                let arrayLoc = fetchRequest("Locatable", attribute: "cameraID", value: cameraIDText)
                 
-                todoItems.append((String(addressText), cameraIDText))
-                print("\(addressText) | \(cameraIDText)")
+                if (arrayLoc.isEmpty){
+                
+                    let locate = NSEntityDescription.insertNewObjectForEntityForName("Locatable", inManagedObjectContext: managedObjectContext) as! Locatable
+                    locate.address = addressText
+                    locate.cameraID = cameraIDText
+                    locate.latitude = NSNumber(double: Double(latText)!)
+                    locate.longitude = NSNumber(double: Double(longText)!)
+                    dictForEntities["Location"] = locate
+                
+                }else{
+                    dictForEntities["Location"] = arrayLoc[0]
+                }
+                
+                let arrayDate = fetchRequest("Date", attribute: "violationDate", value: violationDateText)
+                if (arrayDate.isEmpty){
+                    
+                    let date = NSEntityDescription.insertNewObjectForEntityForName("Date", inManagedObjectContext: managedObjectContext) as! Date
+                    date.violationDate = violationDateText
+                    dictForEntities["Date"] = date
+                    
+                }else{
+                    dictForEntities["Date"] = arrayDate[0]
+                }
+                
+                let arrayViolations = fetchRequest("Violations", attribute: "noOfViolations", value: violationsText)
+                if (arrayViolations.isEmpty){
+                    
+                    let violationsObj = NSEntityDescription.insertNewObjectForEntityForName("Violations", inManagedObjectContext: managedObjectContext) as! Violations
+                    violationsObj.noOfViolations = NSNumber(int: Int32(violationsText)!)
+                    dictForEntities["Violations"] = violationsObj
+                    
+                }else{
+                    dictForEntities["Violations"] = arrayViolations[0]
+                }
+                
+                (dictForEntities["Location"] as! Locatable).addDates(dictForEntities["Date"] as! Date)
+                (dictForEntities["Violations"] as! Violations).forDate = dictForEntities["Date"] as! Date
+                
+                dictForEntities["Location"] = nil
+                dictForEntities["Date"] = nil
+                dictForEntities["Violations"] = nil
+                
+                do{
+                    try managedObjectContext.save()
+                }catch{
+                    print("Cannot Save to core data")
+                }
+                
             }
         }
         sqlite3_finalize(queryStatement)

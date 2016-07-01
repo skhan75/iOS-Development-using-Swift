@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="CameraID" representedClassName=".CameraID" syncable="YES">
-        <attribute name="cameraID" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="locatedAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Locatable" inverseName="cameras" inverseEntity="Locatable" syncable="YES"/>
-        <relationship name="noOfViolations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Violations" inverseName="violationsForCamID" inverseEntity="Violations" syncable="YES"/>
+    <entity name="Date" representedClassName=".Date" syncable="YES">
+        <attribute name="violationDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="atLocations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Locatable" inverseName="atDates" inverseEntity="Locatable" syncable="YES"/>
+        <relationship name="violations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Violations" inverseName="forDate" inverseEntity="Violations" syncable="YES"/>
     </entity>
     <entity name="Locatable" representedClassName=".Locatable" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cameraID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="cameras" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CameraID" inverseName="locatedAt" inverseEntity="CameraID" syncable="YES"/>
+        <relationship name="atDates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Date" inverseName="atLocations" inverseEntity="Date" syncable="YES"/>
     </entity>
     <entity name="Violations" representedClassName=".Violations" syncable="YES">
         <attribute name="noOfViolations" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="violationDate" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="violationsForCamID" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CameraID" inverseName="noOfViolations" inverseEntity="CameraID" syncable="YES"/>
+        <relationship name="forDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Date" inverseName="violations" inverseEntity="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Violations" positionX="-1845" positionY="-1600" width="128" height="88"/>
-        <element name="Locatable" positionX="-2207" positionY="-1611" width="128" height="103"/>
-        <element name="CameraID" positionX="-2036" positionY="-1683" width="128" height="88"/>
+        <element name="Locatable" positionX="-2207" positionY="-1611" width="128" height="118"/>
+        <element name="Violations" positionX="-1845" positionY="-1600" width="128" height="73"/>
+        <element name="Date" positionX="-2025" positionY="-1575" width="128" height="88"/>
     </elements>
 </model>

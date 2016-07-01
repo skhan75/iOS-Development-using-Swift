@@ -1,5 +1,5 @@
 //
-//  CameraID.swift
+//  Date.swift
 //  Hackathon
 //
 //  Created by Sami Ahmad Khan on 6/30/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class CameraID: NSManagedObject {
+class Date: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 
