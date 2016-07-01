@@ -11,19 +11,29 @@ import CoreData
 import Foundation
 
 class TableViewController: UITableViewController {
+
+    var locatables = [NSManagedObject]()
+    //let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
-    //private var menuItems:[MenuItems] = []
-    var managedObjectContext: NSManagedObjectContext? = nil
     var fetchResultController:NSFetchedResultsController!
     
+    
+//    lazy var fetchedResultsController: NSFetchedResultsController = {
+//        let locatablesFetchRequest = NSFetchRequest(entityName: "Locatable")
+//        let dateFetchRequest = NSFetchRequest(entityName: "Date")
+//        let violationsFetchRequest = NSFetchRequest(entityName: "Violations")
+//        
+//        //let frc = NSFetchedResultsController(fetchRequest: locatablesFetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: , cacheName: <#T##String?#>)
+//        
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -36,8 +46,8 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //print(menuItems.count)
-        return 3
+        //print(locatables.count)
+        return 3 //locatables.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -48,6 +58,20 @@ class TableViewController: UITableViewController {
         //cell.violations!.text = "11"//"$\(menuItems[indexPath.row].violations) as! Double)"
         return cell
     }
-
+    
+//    func saveItem(itemToSave : String){
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedContext = appDelegate.managedObjectContext
+//        let locatableEntity = NSEntityDescription.entityForName("Locatable", inManagedObjectContext: managedContext)
+//        let item = NSManagedObject(entity: locatableEntity!, insertIntoManagedObjectContext: managedContext)
+//        do{
+//            try managedContext.save()
+//            locatables.append(item)
+//            print("Save Successfull")
+//        }
+//        catch{
+//            print("Error")
+//        }
+//    }
 
 }
