@@ -10,10 +10,10 @@
 		A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */; };
 		A51FE7FC1D2408D4004A1F19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE7FB1D2408D4004A1F19 /* ViewController.swift */; };
 		A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8001D2408D4004A1F19 /* Hackathon.xcdatamodeld */; };
-		A51FE8041D2408D4004A1F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8031D2408D4004A1F19 /* Assets.xcassets */; };
 		A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */; };
 		A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE80E1D240919004A1F19 /* TableViewController.swift */; };
 		A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8101D24099C004A1F19 /* TableViewCell.swift */; };
+		A58D86C81D27D3AD00C637AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8031D2408D4004A1F19 /* Assets.xcassets */; };
 		A5CAACBD1D2683B100AC8AD6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */; };
 		A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CAACE11D27738700AC8AD6 /* Main.storyboard */; };
 		A5CAACE91D27842300AC8AD6 /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */; };
@@ -163,7 +163,7 @@
 			files = (
 				A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */,
 				A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */,
-				A51FE8041D2408D4004A1F19 /* Assets.xcassets in Resources */,
+				A58D86C81D27D3AD00C637AA /* Assets.xcassets in Resources */,
 				A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

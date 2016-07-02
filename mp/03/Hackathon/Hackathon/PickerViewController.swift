@@ -83,7 +83,6 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             let controller = segue.destinationViewController as! TableViewController
             controller.objectsToShown = attribute
             othersButton.enabled = false
-            
         }
         
         if segue.identifier == "Date" {
