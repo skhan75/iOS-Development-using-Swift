@@ -11,14 +11,16 @@
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="atDates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Date" inverseName="atLocations" inverseEntity="Date" syncable="YES"/>
+        <relationship name="violations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Violations" inverseName="atLocation" inverseEntity="Violations" syncable="YES"/>
     </entity>
     <entity name="Violations" representedClassName=".Violations" syncable="YES">
         <attribute name="noOfViolations" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="atLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Locatable" inverseName="violations" inverseEntity="Locatable" syncable="YES"/>
         <relationship name="forDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Date" inverseName="violations" inverseEntity="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Locatable" positionX="-2207" positionY="-1611" width="128" height="118"/>
-        <element name="Violations" positionX="-1845" positionY="-1600" width="128" height="73"/>
-        <element name="Date" positionX="-2025" positionY="-1575" width="128" height="88"/>
+        <element name="Date" positionX="-2070" positionY="-1503" width="128" height="88"/>
+        <element name="Locatable" positionX="-1892" positionY="-1654" width="128" height="133"/>
+        <element name="Violations" positionX="-1730" positionY="-1510" width="128" height="88"/>
     </elements>
 </model>

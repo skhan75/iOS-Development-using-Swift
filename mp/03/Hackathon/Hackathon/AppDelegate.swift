@@ -46,7 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dictForEntities: NSMutableDictionary = NSMutableDictionary()
         var dbPath: String!
         var db: COpaquePointer = nil
-        var todoItems = [(String, String)]()
         dbPath = NSBundle.mainBundle().pathForResource("CameraViolations", ofType: "db")!
        
         
@@ -68,7 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var queryStatement: COpaquePointer = nil
         
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
-        todoItems = []
         
             let managedObjectContext = self.managedObjectContext
             
@@ -130,7 +128,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 (dictForEntities["Location"] as! Locatable).addDates(dictForEntities["Date"] as! Date)
-                (dictForEntities["Violations"] as! Violations).forDate = dictForEntities["Date"] as! Date
+                (dictForEntities["Violations"] as! Violations).forDate = dictForEntities["Date"] as? Date
+                (dictForEntities["Location"] as! Locatable).violations = dictForEntities["Violations"] as? Violations
                 
                 dictForEntities["Location"] = nil
                 dictForEntities["Date"] = nil

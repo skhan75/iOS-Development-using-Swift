@@ -10,25 +10,30 @@ import UIKit
 import CoreData
 import Foundation
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var locatables = [NSManagedObject]()
-    //let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    //var managedObjectContext: NSManagedObjectContext? = nil
+    var defaultContext: Date?
+    let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    var objectsToShown:String? = nil
     
     var fetchResultController:NSFetchedResultsController!
     
     
-//    lazy var fetchedResultsController: NSFetchedResultsController = {
-//        let locatablesFetchRequest = NSFetchRequest(entityName: "Locatable")
-//        let dateFetchRequest = NSFetchRequest(entityName: "Date")
-//        let violationsFetchRequest = NSFetchRequest(entityName: "Violations")
-//        
-//        //let frc = NSFetchedResultsController(fetchRequest: locatablesFetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: , cacheName: <#T##String?#>)
-//        
-//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fetchRequest = NSFetchRequest(entityName: "Locatable")
+        print(objectsToShown)
+        let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        do{
+            try locatables = managedObjectContext?.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+        }catch{
+            print("Cannot load data into table")
+        }
     }
     
     
@@ -46,32 +51,20 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //print(locatables.count)
-        return 3 //locatables.count
+        print(locatables.count)
+        return locatables.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
         
-        cell.days.text = "11/11/2016"//menuItems[indexPath.row].cameraID
+        //cell.days.text = "11/11/2016"//menuItems[indexPath.row].cameraID
        /// cell.date!.text = "12.11.2016"//menuItems[indexPath.row].violationDate
         //cell.violations!.text = "11"//"$\(menuItems[indexPath.row].violations) as! Double)"
+        cell.textLabel?.text = locatables[indexPath.row].valueForKey("\(objectsToShown!)") as? String
         return cell
     }
     
-//    func saveItem(itemToSave : String){
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        let managedContext = appDelegate.managedObjectContext
-//        let locatableEntity = NSEntityDescription.entityForName("Locatable", inManagedObjectContext: managedContext)
-//        let item = NSManagedObject(entity: locatableEntity!, insertIntoManagedObjectContext: managedContext)
-//        do{
-//            try managedContext.save()
-//            locatables.append(item)
-//            print("Save Successfull")
-//        }
-//        catch{
-//            print("Error")
-//        }
-//    }
+   
 
 }
