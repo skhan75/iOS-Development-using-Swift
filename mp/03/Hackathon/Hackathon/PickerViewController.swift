@@ -1,4 +1,3 @@
-//
 //  PickerViewController.swift
 //  Hackathon
 //
@@ -19,7 +18,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var attribute : String? = nil
    
     
-    var pickView = ["Address", "Violation Date", "CameraID", "#Violations"]
+    var pickView = ["Address", "Violation Date", "CameraID"]
     var placementAnswer = 0
     
     override func viewDidLoad() {
@@ -27,6 +26,8 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         pickerView.delegate = self
         pickerView.dataSource = self
         dateButton.hidden = true
+        othersButton.enabled = false
+        dateButton.enabled = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,17 +48,19 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
 
     @IBAction func submitSelectedPicker(sender: UIButton) {
-        //sender.titleLabel?.text = "Submit"
+        
         if placementAnswer == 0{
             print ("Address selected")
             attribute = "address"
             dateButton.hidden = true
             othersButton.hidden = false
+            othersButton.enabled = true
         }
         
         else if placementAnswer == 1 {
            // performSegueWithIdentifier(<#T##identifier: String##String#>, sender: sender)
             dateButton.hidden = false
+            dateButton.enabled = true
             othersButton.hidden = true
         }
         
@@ -66,14 +69,8 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             attribute = "cameraID"
             dateButton.hidden = true
             othersButton.hidden = false
+            othersButton.enabled = true
         }
-        
-        else {
-            print ("#Violations selected")
-            dateButton.hidden = true
-            othersButton.hidden = false
-        }
-        
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -81,11 +78,19 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "Locatable" {
             let controller = segue.destinationViewController as! TableViewController
             controller.objectsToShown = attribute
+            othersButton.enabled = false
+            
+        }
+        
+        if segue.identifier == "Date" {
+            dateButton.enabled = false
         }
     }
+    
 
     
 }

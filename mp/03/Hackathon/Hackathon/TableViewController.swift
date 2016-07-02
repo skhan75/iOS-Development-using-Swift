@@ -56,11 +56,9 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
         
-        //cell.days.text = "11/11/2016"//menuItems[indexPath.row].cameraID
-       /// cell.date!.text = "12.11.2016"//menuItems[indexPath.row].violationDate
-        //cell.violations!.text = "11"//"$\(menuItems[indexPath.row].violations) as! Double)"
         cell.textLabel?.text = locatables[indexPath.row].valueForKey("\(objectsToShown!)") as? String
         return cell
     }
