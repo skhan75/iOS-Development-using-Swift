@@ -15,6 +15,12 @@ class ViewController: UIViewController {
   var sequence = [3, 2, 0, 1]
   var guessidx = 0
 
+  @IBOutlet weak var sequenceNo: UISlider!
+  
+  
+  @IBAction func sequenceSelection(sender: AnyObject) {
+    //sequence = sender
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "Double tap to start!"

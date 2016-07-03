@@ -13,32 +13,47 @@ import Foundation
 class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var locatables = [NSManagedObject]()
-    //var managedObjectContext: NSManagedObjectContext? = nil
-    var defaultContext: Date?
+    
     let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     var objectsToShown:String? = nil
     
     var fetchResultController:NSFetchedResultsController!
     
+    var datesSet : NSSet = NSSet()
+    var datesArray : [String] = [String]()
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let fetchRequest = NSFetchRequest(entityName: "Locatable")
-        print(objectsToShown)
+        //let fetchRequest1 = NSFetchRequest(entityName: "Date")
         let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
+        
         do{
             try locatables = managedObjectContext?.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+            //try dates = managedObjectContext?.executeFetchRequest(fetchRequest1) as! [NSManagedObject]
         }catch{
-            print("Cannot load data into table")
+            print("ERROR: Cannot load data into table")
         }
+        
+        if (sortDescriptor.key! == "address"){
+            self.title = "Address"
+        }
+        else{
+            self.title = "Camera ID"
+        }
+    
+        //For dynamic title printing, the following code can be used: 
+        // self. title = self.objectsToShown?.capitalizedString
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
     }
     
 
@@ -51,7 +66,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(locatables.count)
         return locatables.count
     }
     
@@ -63,6 +77,21 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         return cell
     }
     
-   
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       //print(locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate")?.count)
+        datesSet = (locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate"))! as! NSSet
+        //self.mutableSetValueForKey("atDates").addObject(datesSet)
+        datesArray = datesSet.allObjects as! [String]
+        print(datesArray)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Locatable2"{
+            let controller = segue.destinationViewController as! InnerTableViewController
+            
+            controller.datesSet = datesSet
+            print (datesArray.count)
+            
+        }
+    }
 }

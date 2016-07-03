@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        NSThread.sleepForTimeInterval(2); // For delaying launch screen
+        NSThread.sleepForTimeInterval(1); // For delaying launch screen
         
         //loadIntoCoredata()
         return true

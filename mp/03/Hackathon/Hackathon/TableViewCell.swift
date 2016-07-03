@@ -13,5 +13,6 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var days: UILabel!
     
+    @IBOutlet weak var datesList: UILabel!
     
 }

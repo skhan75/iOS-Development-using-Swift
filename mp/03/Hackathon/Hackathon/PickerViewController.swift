@@ -59,6 +59,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         else if placementAnswer == 1 {
            // performSegueWithIdentifier(<#T##identifier: String##String#>, sender: sender)
+            attribute = "violationDate"
             dateButton.hidden = false
             dateButton.enabled = true
             othersButton.hidden = true
