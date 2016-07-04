@@ -44,8 +44,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
             self.title = "Camera ID"
         }
         
-        //var rightButton = UIBarButtonItem(title: "Title", style: .Plain, target: self, action: Selector(buttonClicked))
-        //UIToolbar.setItems(rightButton)
         //For dynamic title printing, the following code can be used: 
         // self. title = self.objectsToShown?.capitalizedString
     }
@@ -87,13 +85,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//       //print(locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate")?.count)
-//        datesSet = (locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate"))! as! NSSet
-//        //self.mutableSetValueForKey("atDates").addObject(datesSet)
-//        datesArray = datesSet.allObjects as! [String]
-//        print(datesArray)
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Locatable2"{

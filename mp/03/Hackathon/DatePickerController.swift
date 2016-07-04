@@ -28,13 +28,25 @@ class DatePickerController: UIViewController {
         
         let cal = NSCalendar.currentCalendar()
         let components = cal.components([.Day , .Month , .Year], fromDate: (datePicker.date))
+        
+        
         let dateString = "\(components.month)/\(components.day)/\(components.year)"
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let oldDate = dateFormatter.dateFromString(dateString)!
+        dateFormatter.dateFormat = "MM/dd/yy"
+        let newDate = dateFormatter.stringFromDate(oldDate)
+        print("New Date Format ", newDate)
+        
         let controller = segue.destinationViewController as! AddressTableViewController
-        print(dateString)
+        
+        let newDateString = newDate
+
         let fetchRequest = NSFetchRequest(entityName: "Date")
         let sortDescriptor = NSSortDescriptor(key: "violationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        let predicate = NSPredicate(format: "violationDate == %@", dateString)
+        let predicate = NSPredicate(format: "violationDate == %@", newDateString)
         fetchRequest.predicate = predicate
         
         do{

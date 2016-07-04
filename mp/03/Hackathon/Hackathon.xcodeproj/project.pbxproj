@@ -19,6 +19,10 @@
 		A58D86D31D29DC6B00C637AA /* Alphabetical Sorting 2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */; };
 		A58D86D41D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */; };
 		A58D86D81D29E87500C637AA /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86D71D29E87500C637AA /* DatePickerController.swift */; };
+		A58D86DA1D2A3F9900C637AA /* MapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86D91D2A3F9900C637AA /* MapBarController.swift */; };
+		A58D86DC1D2A424800C637AA /* pin-map-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86DB1D2A424800C637AA /* pin-map-7.png */; };
+		A58D86DE1D2A434A00C637AA /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86DD1D2A434A00C637AA /* home-7.png */; };
+		A58D86E01D2A714C00C637AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58D86DF1D2A714C00C637AA /* MapKit.framework */; };
 		A5CAACBD1D2683B100AC8AD6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */; };
 		A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CAACE11D27738700AC8AD6 /* Main.storyboard */; };
 		A5CAACE91D27842300AC8AD6 /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */; };
@@ -46,6 +50,10 @@
 		A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alphabetical Sorting 2-48.png"; path = "../../../../../../../Downloads/Alphabetical Sorting 2-48.png"; sourceTree = "<group>"; };
 		A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alphabetical Sorting Filled-50.png"; path = "../../../../../../../Downloads/Alphabetical Sorting Filled-50.png"; sourceTree = "<group>"; };
 		A58D86D71D29E87500C637AA /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerController.swift; path = ../DatePickerController.swift; sourceTree = "<group>"; };
+		A58D86D91D2A3F9900C637AA /* MapBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBarController.swift; sourceTree = "<group>"; };
+		A58D86DB1D2A424800C637AA /* pin-map-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-map-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/pin-map-7.png"; sourceTree = "<group>"; };
+		A58D86DD1D2A434A00C637AA /* home-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/home-7.png"; sourceTree = "<group>"; };
+		A58D86DF1D2A714C00C637AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		A5CAACE11D27738700AC8AD6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locatable+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58D86E01D2A714C00C637AA /* MapKit.framework in Frameworks */,
 				A5E87C6E1D246FA90015E764 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +83,7 @@
 		A51FE7ED1D2408D4004A1F19 = {
 			isa = PBXGroup;
 			children = (
+				A58D86DF1D2A714C00C637AA /* MapKit.framework */,
 				A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */,
 				A5CAACE41D27842300AC8AD6 /* Locatable.swift */,
 				A5CAACE51D27842300AC8AD6 /* Date+CoreDataProperties.swift */,
@@ -102,12 +112,15 @@
 				A58D86D71D29E87500C637AA /* DatePickerController.swift */,
 				A58D86CB1D28F08500C637AA /* InnerTableViewController.swift */,
 				A5CAACE11D27738700AC8AD6 /* Main.storyboard */,
+				A58D86D91D2A3F9900C637AA /* MapBarController.swift */,
 				A58D86CF1D29CED300C637AA /* MapDataViewController.swift */,
 				A58D86CD1D29CEA200C637AA /* AddressTableViewController.swift */,
 				A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */,
 				A51FE80E1D240919004A1F19 /* TableViewController.swift */,
 				A5E87C661D246D590015E764 /* bridging-header.h */,
 				A51FE8101D24099C004A1F19 /* TableViewCell.swift */,
+				A58D86DD1D2A434A00C637AA /* home-7.png */,
+				A58D86DB1D2A424800C637AA /* pin-map-7.png */,
 				A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */,
 				A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */,
 				A51FE8031D2408D4004A1F19 /* Assets.xcassets */,
@@ -178,7 +191,9 @@
 			files = (
 				A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */,
 				A58D86D41D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png in Resources */,
+				A58D86DE1D2A434A00C637AA /* home-7.png in Resources */,
 				A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */,
+				A58D86DC1D2A424800C637AA /* pin-map-7.png in Resources */,
 				A58D86C81D27D3AD00C637AA /* Assets.xcassets in Resources */,
 				A58D86D31D29DC6B00C637AA /* Alphabetical Sorting 2-48.png in Resources */,
 				A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */,
@@ -200,6 +215,7 @@
 				A5CAACEA1D27842300AC8AD6 /* Locatable.swift in Sources */,
 				A5CAACEB1D27842300AC8AD6 /* Date+CoreDataProperties.swift in Sources */,
 				A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */,
+				A58D86DA1D2A3F9900C637AA /* MapBarController.swift in Sources */,
 				A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */,
 				A58D86CE1D29CEA200C637AA /* AddressTableViewController.swift in Sources */,
 				A5CAACBD1D2683B100AC8AD6 /* PickerViewController.swift in Sources */,
