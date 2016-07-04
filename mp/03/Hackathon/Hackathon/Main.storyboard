@@ -428,15 +428,6 @@
                                     <rect key="frame" x="229" y="453" width="88" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOH-dv-pHx">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="229" y="511" width="88" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-zs-GC2">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -470,6 +461,15 @@
                                     <action selector="mapViewType:" destination="ktH-PP-9aM" eventType="valueChanged" id="nSe-HA-kCi"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOH-dv-pHx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="229" y="511" width="122" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -479,10 +479,10 @@
                                 <exclude reference="lBl-8Z-xxw"/>
                                 <exclude reference="aRl-Ba-vRY"/>
                                 <exclude reference="aUt-B3-j7U"/>
-                                <exclude reference="zOH-dv-pHx"/>
                                 <exclude reference="TBb-zs-GC2"/>
                                 <exclude reference="5Sh-7j-ZPc"/>
                                 <exclude reference="1Rw-rh-zK4"/>
+                                <exclude reference="zOH-dv-pHx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -492,10 +492,10 @@
                                 <include reference="lBl-8Z-xxw"/>
                                 <include reference="aRl-Ba-vRY"/>
                                 <include reference="aUt-B3-j7U"/>
-                                <include reference="zOH-dv-pHx"/>
                                 <include reference="TBb-zs-GC2"/>
                                 <include reference="5Sh-7j-ZPc"/>
                                 <include reference="1Rw-rh-zK4"/>
+                                <include reference="zOH-dv-pHx"/>
                             </mask>
                         </variation>
                     </view>

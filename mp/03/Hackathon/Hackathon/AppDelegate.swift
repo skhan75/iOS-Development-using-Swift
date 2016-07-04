@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread.sleepForTimeInterval(1); // For delaying launch screen
         
-        loadIntoCoredata()
+        //loadIntoCoredata()
         return true
     }
     

@@ -12,27 +12,39 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet var buttons: [UIButton]!
-  var sequence = [3, 2, 0, 1]
+  var sequence = [Int]()
   var guessidx = 0
+  var sliderSelectedVal: Int = Int()
+  var finalVal: Int = Int()
 
   @IBOutlet weak var sequenceNo: UISlider!
   @IBOutlet var sequenceLabel: UILabel!
   
   
-  @IBAction func sequenceSelection(sender: AnyObject) {
-    let currentVal: UISlider = sender as! UISlider
-    let newVal = Int(currentVal.value)
+  @IBAction func sequenceSelection(sender: UISlider) {
+    let currentVal: UISlider = sender
+    sliderSelectedVal = Int(currentVal.value)
     
-    self.sequenceLabel.text = "\(newVal)"
+    self.sequenceLabel.text = "\(sliderSelectedVal)"
+        
+  }
+    
+  @IBAction func sliderFinalValue(sender: UISlider) {
+        
+    finalVal = Int(sender.value)
+    print(finalVal)
+    for _ in 0..<finalVal{
+        sequence.append(Int(arc4random_uniform(4)))
+    }
     
   }
-
-  
     
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "Double tap to start!"
   }
+    
+   
   
   func flashSequence() {
     let queue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)

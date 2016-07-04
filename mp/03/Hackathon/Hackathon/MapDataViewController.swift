@@ -35,13 +35,7 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         
         let fetchRequest = NSFetchRequest(entityName: "Violations")
         
-        ////let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
-        //fetchRequest.sortDescriptors = [sortDescriptor]
-        
         let predicate = NSPredicate(format: "address == %@ and atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
-        //let predicate2 = NSPredicate(format: "atDate == %@", (dateObj?.violationDate!)!)
-        //let components =
-        
         fetchRequest.predicate = predicate
         
         do{
