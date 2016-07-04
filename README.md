@@ -26,7 +26,8 @@ Extras implemented :
 
 ** User Manual: **
 
-1. First you will be welcomed with a Home screen, where you will get the option for a "Search By".
+1. First you will be welcomed with a Home screen, where you will get the option for a "Search By".   
+** First select the option using the SELECT button and then press SUBMIT to run **
 2. You can start your search using the either of the options.
 3. "Address" --> Will display all the available addresses in the database and you can select any one of them to look into its detail.
 4. "Violation Date" --> You will be greeted with a date picker, where you can select a date and the related informations for camera violations for that particular date will be displayed.
