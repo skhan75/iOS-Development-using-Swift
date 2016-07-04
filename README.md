@@ -24,7 +24,7 @@ Extras implemented :
 ** Database Used **: Camera Violations, Chicago (2014 -2016)  
 ** Application Name **: Camera Violation Analyzer  
 
-User Manual:
+** User Manual: **
 
 1. First you will be welcomed with a Home screen, where you will get the option for a "Search By".
 2. You can start your search using the either of the options.
