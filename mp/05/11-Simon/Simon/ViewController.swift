@@ -16,11 +16,19 @@ class ViewController: UIViewController {
   var guessidx = 0
 
   @IBOutlet weak var sequenceNo: UISlider!
+  @IBOutlet var sequenceLabel: UILabel!
   
   
   @IBAction func sequenceSelection(sender: AnyObject) {
-    //sequence = sender
+    let currentVal: UISlider = sender as! UISlider
+    currentVal.value = round(currentVal.value)
+    
+    self.sequenceLabel.text = currentVal.value.description
+    
   }
+
+  
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "Double tap to start!"
@@ -29,8 +37,10 @@ class ViewController: UIViewController {
   func flashSequence() {
     let queue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
     self.messageLabel.text = "Watch carefully..."
+    
     dispatch_async(queue) {
-      for btnidx in self.sequence {
+      
+        for btnidx in self.sequence {
         dispatch_async(dispatch_get_main_queue()) {
           self.buttons[btnidx].highlighted = true
         }
@@ -83,5 +93,11 @@ class ViewController: UIViewController {
     guessidx = 0
     flashSequence()
   }
+}
+
+extension Float {
+    var cleanValue: String {
+        return self % 1 == 0 ? String(format: "%.0f", self) : String(self)
+    }
 }
 

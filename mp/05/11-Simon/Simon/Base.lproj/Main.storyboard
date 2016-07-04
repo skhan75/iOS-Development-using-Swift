@@ -116,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="NQj-lI-Bad" id="Gin-cp-IVZ"/>
+                        <outlet property="sequenceLabel" destination="sja-IN-nLJ" id="ah1-5O-qhL"/>
                         <outlet property="sequenceNo" destination="KDX-Vk-3tg" id="oqt-oZ-KWs"/>
                         <outletCollection property="buttons" destination="YJN-Oz-abc" collectionClass="NSMutableArray" id="uUB-Ko-yZy"/>
                         <outletCollection property="buttons" destination="lQ7-mv-au6" collectionClass="NSMutableArray" id="FCX-OC-Zww"/>
