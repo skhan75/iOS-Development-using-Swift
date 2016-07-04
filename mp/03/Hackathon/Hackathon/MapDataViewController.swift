@@ -23,13 +23,33 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
     var dateObj : Date? = nil
     var lat: Double = Double()
     var long: Double = Double()
+    var noOfViolations: Int = Int()
     var location1: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    var violations: Violations? = nil
+    let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let initialLocation = CLLocation(latitude: 41.8349, longitude: 87.6270)
-        //centerMapOnLocation(initialLocation)
         self.mapView.delegate = self
+        
+        let fetchRequest = NSFetchRequest(entityName: "Violations")
+        
+        ////let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
+        //fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let predicate = NSPredicate(format: "address == %@ and atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
+        //let predicate2 = NSPredicate(format: "atDate == %@", (dateObj?.violationDate!)!)
+        //let components =
+        
+        fetchRequest.predicate = predicate
+        
+        do{
+            try violations = managedObjectContext?.executeFetchRequest(fetchRequest)[0] as? Violations
+        }catch{
+            print("ERROR: Cannot load data into table")
+        }
+        
         loadMap()
     }
     
@@ -46,6 +66,7 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         addressTextLabel.text = addressObj?.address
         violationDateLabel.text = dateObj?.violationDate
         cameraIDLabel.text = addressObj?.cameraID
+        noOfViolationsLabel.text = "\(violations?.noOfViolations)"
         
         
     }

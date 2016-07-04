@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread.sleepForTimeInterval(1); // For delaying launch screen
         
-        //loadIntoCoredata()
+        loadIntoCoredata()
         return true
     }
     
@@ -121,6 +121,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     let violationsObj = NSEntityDescription.insertNewObjectForEntityForName("Violations", inManagedObjectContext: managedObjectContext) as! Violations
                     violationsObj.noOfViolations = NSNumber(int: Int32(violationsText)!)
+                    violationsObj.address = addressText
+                    violationsObj.atDate = violationDateText
                     dictForEntities["Violations"] = violationsObj
                     
                 }else{

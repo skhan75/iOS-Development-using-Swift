@@ -21,9 +21,9 @@ class ViewController: UIViewController {
   
   @IBAction func sequenceSelection(sender: AnyObject) {
     let currentVal: UISlider = sender as! UISlider
-    currentVal.value = round(currentVal.value)
+    let newVal = Int(currentVal.value)
     
-    self.sequenceLabel.text = currentVal.value.description
+    self.sequenceLabel.text = "\(newVal)"
     
   }
 

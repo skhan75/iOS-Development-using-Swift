@@ -12,9 +12,32 @@ import MapKit
 
 class MapBarController: UIViewController {
     
+    var locatables = [Locatable]()
+    var addressObj: Locatable? = nil
+    let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fetchRequest = NSFetchRequest(entityName: "Locatable")
+        
+        //let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
+        //fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do{
+            try locatables = managedObjectContext?.executeFetchRequest(fetchRequest) as! [Locatable]
+        }catch{
+            print("ERROR: Cannot load data into table")
+        }
+        
+       // loadCompleteMap()
+        print(addressObj?.latitude)
+        
     }
+    
+    func loadCompleteMap() {
+        addressObj?.latitude
+    }
+    
     
 }

@@ -30,7 +30,7 @@ class DatePickerController: UIViewController {
         let components = cal.components([.Day , .Month , .Year], fromDate: (datePicker.date))
         
         
-        let dateString = "\(components.month)/\(components.day)/\(components.year)"
+        let dateString = "\(components.month)/\(components.day)/\(components.year % 100)"
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
@@ -46,7 +46,7 @@ class DatePickerController: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "Date")
         let sortDescriptor = NSSortDescriptor(key: "violationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        let predicate = NSPredicate(format: "violationDate == %@", newDateString)
+        let predicate = NSPredicate(format: "violationDate == %@", dateString)
         fetchRequest.predicate = predicate
         
         do{

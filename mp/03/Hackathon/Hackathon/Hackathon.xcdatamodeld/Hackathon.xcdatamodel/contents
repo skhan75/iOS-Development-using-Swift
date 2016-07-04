@@ -14,6 +14,8 @@
         <relationship name="violations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Violations" inverseName="atLocation" inverseEntity="Violations" syncable="YES"/>
     </entity>
     <entity name="Violations" representedClassName=".Violations" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="atDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="noOfViolations" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="atLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Locatable" inverseName="violations" inverseEntity="Locatable" syncable="YES"/>
         <relationship name="forDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Date" inverseName="violations" inverseEntity="Date" syncable="YES"/>
@@ -21,6 +23,6 @@
     <elements>
         <element name="Date" positionX="-2070" positionY="-1503" width="128" height="88"/>
         <element name="Locatable" positionX="-1892" positionY="-1654" width="128" height="133"/>
-        <element name="Violations" positionX="-1730" positionY="-1510" width="128" height="88"/>
+        <element name="Violations" positionX="-1730" positionY="-1510" width="128" height="118"/>
     </elements>
 </model>
