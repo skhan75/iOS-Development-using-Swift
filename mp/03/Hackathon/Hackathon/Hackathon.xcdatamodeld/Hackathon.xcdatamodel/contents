@@ -3,7 +3,7 @@
     <entity name="Date" representedClassName=".Date" syncable="YES">
         <attribute name="violationDate" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="atLocations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Locatable" inverseName="atDates" inverseEntity="Locatable" syncable="YES"/>
-        <relationship name="violations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Violations" inverseName="forDate" inverseEntity="Violations" syncable="YES"/>
+        <relationship name="violations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Violations" inverseName="forDate" inverseEntity="Violations" syncable="YES"/>
     </entity>
     <entity name="Locatable" representedClassName=".Locatable" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="atDates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Date" inverseName="atLocations" inverseEntity="Date" syncable="YES"/>
-        <relationship name="violations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Violations" inverseName="atLocation" inverseEntity="Violations" syncable="YES"/>
+        <relationship name="violations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Violations" inverseName="atLocation" inverseEntity="Violations" syncable="YES"/>
     </entity>
     <entity name="Violations" representedClassName=".Violations" syncable="YES">
         <attribute name="noOfViolations" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>

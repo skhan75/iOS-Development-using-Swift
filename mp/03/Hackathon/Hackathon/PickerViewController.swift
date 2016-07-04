@@ -87,6 +87,8 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         
         if segue.identifier == "Date" {
+            let controller = segue.destinationViewController as! DatePickerController
+            
             dateButton.enabled = false
         }
     }

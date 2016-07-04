@@ -1,5 +1,5 @@
 //
-//  InnerTableViewController.swift
+//  AddressTableViewController.swift
 //  Hackathon
 //
 //  Created by Sami Ahmad Khan on 7/3/16.
@@ -9,35 +9,35 @@
 import UIKit
 import CoreData
 
-class InnerTableViewController: UITableViewController {
-    
-    var location:Locatable? = nil
-    
-    var datesSet: [Date] = [Date]()
+class AddressTableViewController: UITableViewController {
+
+    var date: Date? = nil
+    var address = [Locatable]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadAddress()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func loadAddress() {
+        address = date?.atLocations?.allObjects as! [Locatable]
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        if date == nil {
+            return 0
+        }else{
+            return 1
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return datesSet.count
+        return address.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPath: indexPath) as! TableViewCell
-        cell.textLabel?.text = datesSet[indexPath.row].violationDate!
+        let cell = tableView.dequeueReusableCellWithIdentifier("address")!
+        cell.textLabel?.text = address[indexPath.row].address!
         return cell
     }
     
@@ -45,10 +45,10 @@ class InnerTableViewController: UITableViewController {
         let indexPath = self.tableView.indexPathForSelectedRow!
         let controller = segue.destinationViewController as! MapDataViewController
         
-        controller.dateObj = datesSet[indexPath.row]
-        controller.addressObj = location
+        controller.addressObj = address[indexPath.row]
+        controller.dateObj = date!
     }
-
+    
     
     
 }

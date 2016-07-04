@@ -14,6 +14,11 @@
 		A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE8101D24099C004A1F19 /* TableViewCell.swift */; };
 		A58D86C81D27D3AD00C637AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51FE8031D2408D4004A1F19 /* Assets.xcassets */; };
 		A58D86CC1D28F08500C637AA /* InnerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86CB1D28F08500C637AA /* InnerTableViewController.swift */; };
+		A58D86CE1D29CEA200C637AA /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86CD1D29CEA200C637AA /* AddressTableViewController.swift */; };
+		A58D86D01D29CED300C637AA /* MapDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86CF1D29CED300C637AA /* MapDataViewController.swift */; };
+		A58D86D31D29DC6B00C637AA /* Alphabetical Sorting 2-48.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */; };
+		A58D86D41D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */; };
+		A58D86D81D29E87500C637AA /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D86D71D29E87500C637AA /* DatePickerController.swift */; };
 		A5CAACBD1D2683B100AC8AD6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */; };
 		A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CAACE11D27738700AC8AD6 /* Main.storyboard */; };
 		A5CAACE91D27842300AC8AD6 /* Locatable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */; };
@@ -36,6 +41,11 @@
 		A51FE80E1D240919004A1F19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A51FE8101D24099C004A1F19 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A58D86CB1D28F08500C637AA /* InnerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerTableViewController.swift; path = ../InnerTableViewController.swift; sourceTree = "<group>"; };
+		A58D86CD1D29CEA200C637AA /* AddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
+		A58D86CF1D29CED300C637AA /* MapDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDataViewController.swift; sourceTree = "<group>"; };
+		A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alphabetical Sorting 2-48.png"; path = "../../../../../../../Downloads/Alphabetical Sorting 2-48.png"; sourceTree = "<group>"; };
+		A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alphabetical Sorting Filled-50.png"; path = "../../../../../../../Downloads/Alphabetical Sorting Filled-50.png"; sourceTree = "<group>"; };
+		A58D86D71D29E87500C637AA /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerController.swift; path = ../DatePickerController.swift; sourceTree = "<group>"; };
 		A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		A5CAACE11D27738700AC8AD6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5CAACE31D27842300AC8AD6 /* Locatable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locatable+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -89,12 +99,17 @@
 			isa = PBXGroup;
 			children = (
 				A51FE7F91D2408D4004A1F19 /* AppDelegate.swift */,
+				A58D86D71D29E87500C637AA /* DatePickerController.swift */,
 				A58D86CB1D28F08500C637AA /* InnerTableViewController.swift */,
 				A5CAACE11D27738700AC8AD6 /* Main.storyboard */,
+				A58D86CF1D29CED300C637AA /* MapDataViewController.swift */,
+				A58D86CD1D29CEA200C637AA /* AddressTableViewController.swift */,
 				A5CAACBC1D2683B100AC8AD6 /* PickerViewController.swift */,
 				A51FE80E1D240919004A1F19 /* TableViewController.swift */,
 				A5E87C661D246D590015E764 /* bridging-header.h */,
 				A51FE8101D24099C004A1F19 /* TableViewCell.swift */,
+				A58D86D11D29DC6B00C637AA /* Alphabetical Sorting 2-48.png */,
+				A58D86D21D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png */,
 				A51FE8031D2408D4004A1F19 /* Assets.xcassets */,
 				A51FE8051D2408D4004A1F19 /* LaunchScreen.storyboard */,
 				A51FE8081D2408D4004A1F19 /* Info.plist */,
@@ -162,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E87C741D24D9BB0015E764 /* CameraViolations.db in Resources */,
+				A58D86D41D29DC6B00C637AA /* Alphabetical Sorting Filled-50.png in Resources */,
 				A51FE8071D2408D4004A1F19 /* LaunchScreen.storyboard in Resources */,
 				A58D86C81D27D3AD00C637AA /* Assets.xcassets in Resources */,
+				A58D86D31D29DC6B00C637AA /* Alphabetical Sorting 2-48.png in Resources */,
 				A5CAACE21D27738700AC8AD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,13 +195,16 @@
 				A58D86CC1D28F08500C637AA /* InnerTableViewController.swift in Sources */,
 				A5CAACE91D27842300AC8AD6 /* Locatable+CoreDataProperties.swift in Sources */,
 				A5CAACEC1D27842300AC8AD6 /* Date.swift in Sources */,
+				A58D86D81D29E87500C637AA /* DatePickerController.swift in Sources */,
 				A5CAACED1D27842300AC8AD6 /* Violations+CoreDataProperties.swift in Sources */,
 				A5CAACEA1D27842300AC8AD6 /* Locatable.swift in Sources */,
 				A5CAACEB1D27842300AC8AD6 /* Date+CoreDataProperties.swift in Sources */,
 				A51FE8111D24099C004A1F19 /* TableViewCell.swift in Sources */,
 				A51FE7FA1D2408D4004A1F19 /* AppDelegate.swift in Sources */,
+				A58D86CE1D29CEA200C637AA /* AddressTableViewController.swift in Sources */,
 				A5CAACBD1D2683B100AC8AD6 /* PickerViewController.swift in Sources */,
 				A51FE8021D2408D4004A1F19 /* Hackathon.xcdatamodeld in Sources */,
+				A58D86D01D29CED300C637AA /* MapDataViewController.swift in Sources */,
 				A51FE80F1D240919004A1F19 /* TableViewController.swift in Sources */,
 				A5CAACEE1D27842300AC8AD6 /* Violations.swift in Sources */,
 			);

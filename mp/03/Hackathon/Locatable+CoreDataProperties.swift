@@ -2,7 +2,7 @@
 //  Locatable+CoreDataProperties.swift
 //  Hackathon
 //
-//  Created by Sami Ahmad Khan on 7/2/16.
+//  Created by Sami Ahmad Khan on 7/3/16.
 //  Copyright © 2016 Sami Ahmad Khan. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,10 +19,14 @@ extension Locatable {
     @NSManaged var latitude: NSNumber?
     @NSManaged var longitude: NSNumber?
     @NSManaged var atDates: NSSet?
-    @NSManaged var violations: Violations?
+    @NSManaged var violations: NSSet?
     
     func addDates(date:Date) {
         self.mutableSetValueForKey("atDates").addObject(date)
+    }
+    
+    func addViolations(violation:Violations) {
+        self.mutableSetValueForKey("violations").addObject(violation)
     }
 
 }

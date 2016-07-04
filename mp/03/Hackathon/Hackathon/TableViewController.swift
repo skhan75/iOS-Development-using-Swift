@@ -19,22 +19,20 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     
     var fetchResultController:NSFetchedResultsController!
     
-    var datesSet : NSSet = NSSet()
-    var datesArray : [String] = [String]()
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        
         let fetchRequest = NSFetchRequest(entityName: "Locatable")
-        //let fetchRequest1 = NSFetchRequest(entityName: "Date")
+        
         let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         do{
             try locatables = managedObjectContext?.executeFetchRequest(fetchRequest) as! [NSManagedObject]
-            //try dates = managedObjectContext?.executeFetchRequest(fetchRequest1) as! [NSManagedObject]
         }catch{
             print("ERROR: Cannot load data into table")
         }
@@ -45,7 +43,9 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         else{
             self.title = "Camera ID"
         }
-    
+        
+        //var rightButton = UIBarButtonItem(title: "Title", style: .Plain, target: self, action: Selector(buttonClicked))
+        //UIToolbar.setItems(rightButton)
         //For dynamic title printing, the following code can be used: 
         // self. title = self.objectsToShown?.capitalizedString
     }
@@ -54,6 +54,16 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setToolbarHidden(false, animated: animated)
+            }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated);
+        self.navigationController?.setToolbarHidden(true, animated: animated)
     }
     
 
@@ -78,19 +88,24 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       //print(locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate")?.count)
-        datesSet = (locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate"))! as! NSSet
-        //self.mutableSetValueForKey("atDates").addObject(datesSet)
-        datesArray = datesSet.allObjects as! [String]
-        print(datesArray)
+//       //print(locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate")?.count)
+//        datesSet = (locatables[indexPath.row].valueForKey("atDates")?.valueForKey("violationDate"))! as! NSSet
+//        //self.mutableSetValueForKey("atDates").addObject(datesSet)
+//        datesArray = datesSet.allObjects as! [String]
+//        print(datesArray)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Locatable2"{
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let locatableObj = locatables[indexPath!.row] as! Locatable
+            let atDates = locatableObj.atDates!
+            let array = atDates.allObjects as! [Date]
+            //let datesSet = (locatables[indexPath!.row] as! Locatable).atDates?.allObjects as! [String]
             let controller = segue.destinationViewController as! InnerTableViewController
-            
-            controller.datesSet = datesSet
-            print (datesArray.count)
+            controller.location = locatableObj
+            controller.datesSet = array
+            //print (datesArray.count)
             
         }
     }

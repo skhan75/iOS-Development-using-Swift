@@ -129,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 (dictForEntities["Location"] as! Locatable).addDates(dictForEntities["Date"] as! Date)
                 (dictForEntities["Violations"] as! Violations).forDate = dictForEntities["Date"] as? Date
-                (dictForEntities["Location"] as! Locatable).violations = dictForEntities["Violations"] as? Violations
+                (dictForEntities["Location"] as! Locatable).addViolations((dictForEntities["Violations"] as? Violations)! )
                 
                 dictForEntities["Location"] = nil
                 dictForEntities["Date"] = nil
