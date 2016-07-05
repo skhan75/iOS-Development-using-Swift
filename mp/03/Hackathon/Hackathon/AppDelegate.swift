@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NSThread.sleepForTimeInterval(1); // For delaying launch screen
         
-        //loadIntoCoredata()
+        loadIntoCoredata()
         return true
     }
     
@@ -131,7 +131,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 (dictForEntities["Location"] as! Locatable).addDates(dictForEntities["Date"] as! Date)
                 (dictForEntities["Violations"] as! Violations).forDate = dictForEntities["Date"] as? Date
-                (dictForEntities["Location"] as! Locatable).addViolations((dictForEntities["Violations"] as? Violations)! )
+                (dictForEntities["Violations"] as? Violations)!.atLocation = dictForEntities["Location"] as? Locatable
                 
                 dictForEntities["Location"] = nil
                 dictForEntities["Date"] = nil
@@ -150,16 +150,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(application: UIApplication) {
     }
-
     func applicationDidEnterBackground(application: UIApplication) {
     }
-
     func applicationWillEnterForeground(application: UIApplication) {
     }
-
     func applicationDidBecomeActive(application: UIApplication) {
     }
-
     func applicationWillTerminate(application: UIApplication) {
         self.saveContext()
     }

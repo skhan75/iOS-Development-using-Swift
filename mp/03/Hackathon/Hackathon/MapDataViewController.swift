@@ -25,7 +25,9 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
     var long: Double = Double()
     var noOfViolations: Int = Int()
     var location1: CLLocationCoordinate2D = CLLocationCoordinate2D()
-    var violations: Violations? = nil
+    var violations: [Violations]? = nil
+    var indexPath: NSIndexPath? = nil
+    
     let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     
@@ -35,13 +37,22 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         
         let fetchRequest = NSFetchRequest(entityName: "Violations")
         
-        let predicate = NSPredicate(format: "address == %@ and atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
+        let predicate = NSPredicate(format: "address == %@ AND atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
         fetchRequest.predicate = predicate
         
         do{
-            try violations = managedObjectContext?.executeFetchRequest(fetchRequest)[0] as? Violations
+            try violations = managedObjectContext?.executeFetchRequest(fetchRequest) as? [Violations]
         }catch{
             print("ERROR: Cannot load data into table")
+        }
+        
+        
+        let violArray = addressObj?.violations?.allObjects as! [Violations]
+        for viol in violArray{
+            print(viol.address)
+            if viol.forDate?.violationDate == dateObj?.violationDate!{
+                noOfViolations = Int(viol.noOfViolations!)
+            }
         }
         
         loadMap()
@@ -55,12 +66,12 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         location1 = CLLocationCoordinate2DMake(lat, long)
         centerMapOnLocation(location)
         
-        print(addressObj?.address)
-        print(dateObj?.violationDate)
         addressTextLabel.text = addressObj?.address
         violationDateLabel.text = dateObj?.violationDate
         cameraIDLabel.text = addressObj?.cameraID
-        noOfViolationsLabel.text = "\(violations?.noOfViolations)"
+        //print(violations![(indexPath?.row)!].noOfViolations)
+        //noOfViolationsLabel.text = "\(violations![0].noOfViolations)"
+        noOfViolationsLabel.text = "\(noOfViolations)"
         
         
     }

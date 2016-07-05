@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Simon
 //
@@ -15,7 +14,7 @@ class ViewController: UIViewController {
   var sequence = [Int]()
   var guessidx = 0
   var sliderSelectedVal: Int = Int()
-  var finalVal: Int = Int()
+  var finalVal: Int = 3
   var usedValues: NSMutableSet = NSMutableSet()
 
   @IBOutlet weak var sequenceNo: UISlider!
@@ -29,30 +28,31 @@ class ViewController: UIViewController {
   }
     
   @IBAction func sliderFinalValue(sender: UISlider) {
-    var randomNo: UInt32 = 0
+    
     finalVal = Int(sender.value)
-
     print(finalVal)
-    for _ in 0..<finalVal{
-        
-        let prevNo = randomNo
-        randomNo = arc4random_uniform(4)
-        
-        if(prevNo != randomNo){
-            sequence.append(Int(randomNo))
-        }
-    }
-    finalVal = 0
+    
   }
     
    @IBAction func whenFingerLifted(sender: UISlider) {
-      //sequence.removeAll()
    }
+    
+    func generateSequence(){
+        var randomNo: UInt32 = 0
+        for _ in 0..<finalVal{
+            
+            //let prevNo = randomNo
+            randomNo = arc4random_uniform(4)
+            sequence.append(Int(randomNo))
+        }
+
+    }
     
     
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "Double tap to start!"
+    generateSequence()
   }
     
   func flashSequence() {
@@ -62,13 +62,14 @@ class ViewController: UIViewController {
     dispatch_async(queue) {
       
         for btnidx in self.sequence {
-        dispatch_async(dispatch_get_main_queue()) {
-          self.buttons[btnidx].highlighted = true
-        }
-        NSThread.sleepForTimeInterval(1.0)
-        dispatch_async(dispatch_get_main_queue()) {
-          self.buttons[btnidx].highlighted = false
-        }
+          dispatch_async(dispatch_get_main_queue()) {
+            self.buttons[btnidx].highlighted = true
+          }
+          NSThread.sleepForTimeInterval(1.0)
+          dispatch_async(dispatch_get_main_queue()) {
+            self.buttons[btnidx].highlighted = false
+          }
+          NSThread.sleepForTimeInterval(1.0)
       }
       dispatch_async(dispatch_get_main_queue()) {
         self.messageLabel.text = "Tap out the sequence!"

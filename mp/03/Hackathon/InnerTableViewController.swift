@@ -47,6 +47,7 @@ class InnerTableViewController: UITableViewController {
         
         controller.dateObj = datesSet[indexPath.row]
         controller.addressObj = location
+        controller.indexPath = self.tableView.indexPathForSelectedRow
     }
 
     
