@@ -24,9 +24,9 @@ Extras implemented :
 ** Database Used **: Camera Violations, Chicago (2014 -2016)  
 ** Application Name **: Camera Violation Analyzer  
 
-** User Manual: **
+* When you launch the application for the first time, the application takes some time ( 6-8 minutes) to launch the home screen because it will be loading the database file to the core data.   
 
-* When you launch the application for the first time, the application takes some time ( 6-8 minutes) to launch the home screen because it will be loading the database file to the core data.  
+** User Manual: **
   
 1. First you will be welcomed with a Home screen, where you will get the option for a "Search By".   
 ** First select the option using the SELECT button and then press SUBMIT to run **
