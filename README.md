@@ -4,7 +4,7 @@
 Email Address: skhan75@hawk.iit.edu  
 Student ID: A20352677    **
 
-** ## MP/01 --> Simple Unit Converter **
+## ** MP/01 --> Simple Unit Converter **
 
 Extras implemented :      
 
@@ -12,14 +12,14 @@ Extras implemented :
 2. Automatic Conversion Direction selection   
 3. "Insta" Conversions
 
-** ## MP/02 -->  Improved Unit Converter **
+## ** MP/02 -->  Improved Unit Converter **
 
 Extras implemented :
 
 1. "Insta" Conversions
 2. Unit abbreviations & "pretty" printing
 
-** ## MP/03-04 --> Project/Hackathon --> Camera Violations Analyzer **
+## ** MP/03-04 --> Project/Hackathon --> Camera Violations Analyzer **
 
 ** Database Used **: Camera Violations, Chicago (2014 -2016)  
 ** Application Name **: Camera Violation Analyzer  
@@ -36,7 +36,7 @@ Extras implemented :
 
 ** P.S. ** Please excuse for the minor glitches and errors if you encounter any, because the project was done solely on my own and not in a group and hence due to lack of time and individual work, there could be some bugs or minor glitches. Please notify me of such issues which I will ensure to resolve immediately.
 
-** ## MP/05 --> Simon Game **
+## ** MP/05 --> Simon Game **
 
 1. Slider Included
 2. Slider value label working properly
