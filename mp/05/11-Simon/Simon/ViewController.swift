@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     finalVal = Int(sender.value)
     print(finalVal)
-    
+    generateSequence()
   }
     
    @IBAction func whenFingerLifted(sender: UISlider) {
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     if buttons[sequence[guessidx]] == sender {
       messageLabel.text = "Good guess"
       guessidx += 1
-      if guessidx == buttons.count {
+      if guessidx == sequence.count {
         messageLabel.text = "You win (double tap to restart)"
         guessidx = 0
       }
