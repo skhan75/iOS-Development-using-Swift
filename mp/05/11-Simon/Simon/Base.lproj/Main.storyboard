@@ -63,6 +63,7 @@
                                 <connections>
                                     <action selector="sequenceSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z3L-hk-jiJ"/>
                                     <action selector="sliderFinalValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPO-tN-cXT"/>
+                                    <action selector="whenFingerLifted:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Bvz-q1-s4Z"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sequence Length: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-jK-lYR">

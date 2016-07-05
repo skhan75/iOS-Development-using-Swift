@@ -16,6 +16,7 @@ class ViewController: UIViewController {
   var guessidx = 0
   var sliderSelectedVal: Int = Int()
   var finalVal: Int = Int()
+  var usedValues: NSMutableSet = NSMutableSet()
 
   @IBOutlet weak var sequenceNo: UISlider!
   @IBOutlet var sequenceLabel: UILabel!
@@ -24,28 +25,36 @@ class ViewController: UIViewController {
   @IBAction func sequenceSelection(sender: UISlider) {
     let currentVal: UISlider = sender
     sliderSelectedVal = Int(currentVal.value)
-    
     self.sequenceLabel.text = "\(sliderSelectedVal)"
-        
   }
     
   @IBAction func sliderFinalValue(sender: UISlider) {
-        
+    var randomNo: UInt32 = 0
     finalVal = Int(sender.value)
+
     print(finalVal)
     for _ in 0..<finalVal{
-        sequence.append(Int(arc4random_uniform(4)))
+        
+        let prevNo = randomNo
+        randomNo = arc4random_uniform(4)
+        
+        if(prevNo != randomNo){
+            sequence.append(Int(randomNo))
+        }
     }
-    
+    finalVal = 0
   }
+    
+   @IBAction func whenFingerLifted(sender: UISlider) {
+      //sequence.removeAll()
+   }
+    
     
   override func viewDidLoad() {
     super.viewDidLoad()
     messageLabel.text = "Double tap to start!"
   }
     
-   
-  
   func flashSequence() {
     let queue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
     self.messageLabel.text = "Watch carefully..."
@@ -107,9 +116,4 @@ class ViewController: UIViewController {
   }
 }
 
-extension Float {
-    var cleanValue: String {
-        return self % 1 == 0 ? String(format: "%.0f", self) : String(self)
-    }
-}
 
