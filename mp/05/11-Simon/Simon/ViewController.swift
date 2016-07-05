@@ -114,6 +114,7 @@ class ViewController: UIViewController {
   
   @IBAction func startGame(sender: AnyObject) {
     guessidx = 0
+    generateSequence()
     flashSequence()
   }
 }
