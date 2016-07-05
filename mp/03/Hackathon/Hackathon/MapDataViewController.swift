@@ -35,22 +35,22 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         self.mapView.delegate = self
         
-        let fetchRequest = NSFetchRequest(entityName: "Violations")
-        
-        let predicate = NSPredicate(format: "address == %@ AND atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
-        fetchRequest.predicate = predicate
-        
-        do{
-            try violations = managedObjectContext?.executeFetchRequest(fetchRequest) as? [Violations]
-        }catch{
-            print("ERROR: Cannot load data into table")
-        }
+//        let fetchRequest = NSFetchRequest(entityName: "Violations")
+//        
+//        let predicate = NSPredicate(format: "address == %@ AND atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
+//        fetchRequest.predicate = predicate
+//        
+//        do{
+//            try violations = managedObjectContext?.executeFetchRequest(fetchRequest) as? [Violations]
+//        }catch{
+//            print("ERROR: Cannot load data into table")
+//        }
         
         
         let violArray = addressObj?.violations?.allObjects as! [Violations]
         for viol in violArray{
             print(viol.address)
-            if viol.forDate?.violationDate == dateObj?.violationDate!{
+            if viol.forDate! == dateObj!{
                 noOfViolations = Int(viol.noOfViolations!)
             }
         }

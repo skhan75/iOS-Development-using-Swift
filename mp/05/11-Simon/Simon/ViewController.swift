@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     func generateSequence(){
         var randomNo: UInt32 = 0
+        sequence = [Int]()
         for _ in 0..<finalVal{
             
             //let prevNo = randomNo

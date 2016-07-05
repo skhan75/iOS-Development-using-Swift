@@ -14,13 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         NSThread.sleepForTimeInterval(1); // For delaying launch screen
         
-        loadIntoCoredata()
+        if(isEntityEmpty("Locatable") == true){
+            loadIntoCoredata()
+        }
+        
         return true
+    }
+    
+    func fetchRequestViolations(entity: String, attribute: [String], value: [String]) -> [Violations]{
+                let fetchRequest = NSFetchRequest(entityName: "Violations")
+        
+                let predicate = NSPredicate(format: "\(attribute[0]) == %@ AND \(attribute[1]) == %@" , value[0], value[1])
+                fetchRequest.predicate = predicate
+                var violations = [Violations]()
+                do{
+                    violations = try managedObjectContext.executeFetchRequest(fetchRequest) as! [Violations]
+                }catch{
+                    print("ERROR: Cannot load data into table")
+                }
+        
+        return violations
     }
     
     func fetchRequest(entity: String, attribute: String ,value: String) -> [AnyObject] {
@@ -116,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     dictForEntities["Date"] = arrayDate[0]
                 }
                 
-                let arrayViolations = fetchRequest("Violations", attribute: "noOfViolations", value: violationsText)
+                let arrayViolations = fetchRequestViolations("Violations", attribute: ["address","atDate"], value: [addressText,violationDateText])
                 if (arrayViolations.isEmpty){
                     
                     let violationsObj = NSEntityDescription.insertNewObjectForEntityForName("Violations", inManagedObjectContext: managedObjectContext) as! Violations
@@ -222,6 +240,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func isEntityEmpty(entity: String) -> Bool {
+        let fetch = NSFetchRequest(entityName: entity)
+        var results = [AnyObject]()
+        do {
+            results = try self.managedObjectContext.executeFetchRequest(fetch)
+        }catch {
+                print ("Error")
+            }
+        
+        
+            if results.count == 0 {
+                return true
+            }
+            else { return false }
+            
+
+       
+    }
+    
 
 }
 
