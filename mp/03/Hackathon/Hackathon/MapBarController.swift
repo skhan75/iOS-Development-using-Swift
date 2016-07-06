@@ -10,10 +10,15 @@ import UIKit
 import CoreData
 import MapKit
 
-class MapBarController: UIViewController {
+class MapBarController: UIViewController,MKMapViewDelegate{
     
+    @IBOutlet var mapView: MKMapView!
     var locatables = [Locatable]()
-    var addressObj: Locatable? = nil
+    var dates: [Date] = [Date]()
+    var lat: [Double] = [Double]()
+    var long: [Double] = [Double]()
+    let regionRadius: CLLocationDistance = 1000
+    
     let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
     override func viewDidLoad() {
@@ -27,14 +32,27 @@ class MapBarController: UIViewController {
             print("ERROR: Cannot load data into table")
         }
         
-       // loadCompleteMap()
-        print(addressObj?.latitude)
+       loadCompleteMap()
+        //print(addressObj?.latitude)
         
     }
     
     func loadCompleteMap() {
-        addressObj?.latitude
+        
+        for loc in locatables{
+            let location1 = CLLocationCoordinate2DMake(Double(loc.latitude!), Double(loc.longitude!))
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = location1
+            dropPin.title = loc.address
+            mapView.addAnnotation(dropPin)
+        }
+        let location1 = CLLocation(latitude: Double(locatables[0].latitude!), longitude: Double(locatables[0].longitude!))
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location1.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
     }
+    
+    
     
     
 }
