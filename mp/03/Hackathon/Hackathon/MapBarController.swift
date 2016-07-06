@@ -13,11 +13,12 @@ import MapKit
 class MapBarController: UIViewController,MKMapViewDelegate{
     
     @IBOutlet var mapView: MKMapView!
+    
     var locatables = [Locatable]()
     var dates: [Date] = [Date]()
     var lat: [Double] = [Double]()
     var long: [Double] = [Double]()
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 2000
     
     let managedObjectContext: NSManagedObjectContext? = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext
     
@@ -52,6 +53,20 @@ class MapBarController: UIViewController,MKMapViewDelegate{
         
     }
     
+    @IBAction func mapType(sender: AnyObject) {
+        if sender.selectedSegmentIndex == 0 {
+            mapView.mapType = MKMapType.Standard
+        }
+            
+        else if sender.selectedSegmentIndex == 1 {
+            mapView.mapType = MKMapType.Satellite
+        }
+            
+        else if sender.selectedSegmentIndex == 2 {
+            mapView.mapType = MKMapType.Hybrid
+        }
+
+    }
     
     
     

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Label-->
@@ -118,23 +119,60 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EKo-oF-zzT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="558"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="JdK-dl-UK4" id="dak-ag-XjI"/>
                                 </connections>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qpu-Gd-Ddn">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapType:" destination="JdK-dl-UK4" eventType="valueChanged" id="tLd-NW-EV7"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EKo-oF-zzT" secondAttribute="trailing" id="HP0-0h-ByO"/>
+                            <constraint firstItem="EKo-oF-zzT" firstAttribute="leading" secondItem="OlT-B4-xeZ" secondAttribute="leading" id="L9c-K7-PCu"/>
+                            <constraint firstItem="46h-po-nrp" firstAttribute="top" secondItem="Qpu-Gd-Ddn" secondAttribute="bottom" constant="41" id="SWb-St-jPQ"/>
+                            <constraint firstItem="Qpu-Gd-Ddn" firstAttribute="leading" secondItem="OlT-B4-xeZ" secondAttribute="leadingMargin" constant="71" id="nKG-Jl-4Pp"/>
+                            <constraint firstItem="Qpu-Gd-Ddn" firstAttribute="top" secondItem="EKo-oF-zzT" secondAttribute="bottom" constant="8" symbolic="YES" id="rAp-2d-OGY"/>
+                            <constraint firstItem="EKo-oF-zzT" firstAttribute="centerX" secondItem="Qpu-Gd-Ddn" secondAttribute="centerX" id="uRx-7R-K5M"/>
+                            <constraint firstItem="EKo-oF-zzT" firstAttribute="top" secondItem="OlT-B4-xeZ" secondAttribute="top" id="z6Y-qU-bbt"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="EKo-oF-zzT"/>
+                                <exclude reference="Qpu-Gd-Ddn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HP0-0h-ByO"/>
+                                <exclude reference="L9c-K7-PCu"/>
+                                <exclude reference="uRx-7R-K5M"/>
+                                <exclude reference="z6Y-qU-bbt"/>
+                                <exclude reference="nKG-Jl-4Pp"/>
+                                <exclude reference="rAp-2d-OGY"/>
+                                <exclude reference="SWb-St-jPQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="EKo-oF-zzT"/>
+                                <include reference="Qpu-Gd-Ddn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HP0-0h-ByO"/>
+                                <include reference="L9c-K7-PCu"/>
+                                <include reference="uRx-7R-K5M"/>
+                                <include reference="z6Y-qU-bbt"/>
+                                <include reference="nKG-Jl-4Pp"/>
+                                <include reference="rAp-2d-OGY"/>
+                                <include reference="SWb-St-jPQ"/>
                             </mask>
                         </variation>
                     </view>
