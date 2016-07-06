@@ -21,16 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var stylesheet : NSMutableDictionary?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-       // window = UIWindow(frame: UIScreen.mainScreen().bounds)
-       // window?.makeKeyAndVisible()
-        
-        //let controller = TableViewController()
-        //let navigatioController = UINavigationController(rootViewController: controller)
-        //window?.rootViewController = navigatioController
-        
-        
+               
         let filePath = NSBundle.mainBundle().pathForResource("ConversionInfo", ofType: "plist")!
         stylesheet = NSMutableDictionary(contentsOfFile:filePath)
         let categoriesInPlist = stylesheet?.objectForKey("Categories")

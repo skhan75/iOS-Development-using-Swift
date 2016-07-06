@@ -1,4 +1,3 @@
-//
 //  MapDataViewController.swift
 //  Hackathon
 //
@@ -35,18 +34,6 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         self.mapView.delegate = self
         
-//        let fetchRequest = NSFetchRequest(entityName: "Violations")
-//        
-//        let predicate = NSPredicate(format: "address == %@ AND atDate == %@" , (addressObj?.address!)!, (dateObj?.violationDate!)!)
-//        fetchRequest.predicate = predicate
-//        
-//        do{
-//            try violations = managedObjectContext?.executeFetchRequest(fetchRequest) as? [Violations]
-//        }catch{
-//            print("ERROR: Cannot load data into table")
-//        }
-        
-        
         let violArray = addressObj?.violations?.allObjects as! [Violations]
         for viol in violArray{
             print(viol.address)
@@ -59,7 +46,6 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
     }
     
     func loadMap(){
-        
         lat = addressObj?.latitude as! Double
         long = addressObj?.longitude as! Double
         let location = CLLocation(latitude: lat, longitude: long)
@@ -69,11 +55,7 @@ class MapDataViewController: UIViewController, MKMapViewDelegate {
         addressTextLabel.text = addressObj?.address
         violationDateLabel.text = dateObj?.violationDate
         cameraIDLabel.text = addressObj?.cameraID
-        //print(violations![(indexPath?.row)!].noOfViolations)
-        //noOfViolationsLabel.text = "\(violations![0].noOfViolations)"
         noOfViolationsLabel.text = "\(noOfViolations)"
-        
-        
     }
     
     let regionRadius: CLLocationDistance = 1000

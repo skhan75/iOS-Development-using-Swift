@@ -23,6 +23,7 @@ class DetailTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = CellTitle
         self.hideKeyboardWhenTappedAround()
+        self.tableView.backgroundColor = UIColor.lightGrayColor()
 
     }
 
@@ -51,6 +52,7 @@ class DetailTableViewController: UITableViewController {
             for _ in value {
                 if(CellTitle == appDelegate.categoriesArray[m] ){
                     cell.unitName!.text = appDelegate.eachUnitNameForCategories[CellTitle]![indexPath.row]
+                    cell.unitName!.font = UIFont.boldSystemFontOfSize(15.0)
                     cell.value.placeholder = "0.0"
                 }
             }
@@ -64,6 +66,15 @@ class DetailTableViewController: UITableViewController {
         let table = currentCell.superview!.superview! as! UITableView
         let row = table.indexPathForCell(currentCell)!.row
         convertedUnits = conversionObject.valueCalculation(row, category: self.title!, enteredValueByUser: sender.text!, tableView : table)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.whiteColor()
+        }
+        else{
+            cell.backgroundColor = UIColor.lightGrayColor()
+        }
     }
 }
 

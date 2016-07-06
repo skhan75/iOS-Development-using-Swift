@@ -28,8 +28,7 @@ class UnitConverter {
         let selectedRowValue = keysInPlist![keyArr[row]]!!
         
         if selectedRowValue is NSArray {
-            //selectedRowValue.removeObjectAtIndex(0)
-            //print(selectedRowValue)
+            
             if let label = NSNumberFormatter().numberFromString(enteredValueByUser){
                 enteredValue = label.doubleValue
             }

@@ -15,6 +15,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor.lightGrayColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +40,8 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
 
         cell.cellText!.text = appDelegate.categoriesArray[indexPath.row]
-
+        cell.cellText!.font = UIFont.boldSystemFontOfSize(15.0)
+        
         return cell
     }
     
@@ -52,6 +54,16 @@ class TableViewController: UITableViewController {
             let selectedRow = tableView.indexPathForCell(cell)!.row
             destination.CellTitle = appDelegate.categoriesArray[selectedRow]
         }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.whiteColor()
+        }
+        else{
+            cell.backgroundColor = UIColor.lightGrayColor()
+        }
+        
     }
 
     

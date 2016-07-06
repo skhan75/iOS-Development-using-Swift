@@ -23,6 +23,7 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //unitName.font = UIFont.boldSystemFontOfSize(16.0)
         // Initialization code
     }
 

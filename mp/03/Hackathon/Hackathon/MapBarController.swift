@@ -21,9 +21,6 @@ class MapBarController: UIViewController {
         
         let fetchRequest = NSFetchRequest(entityName: "Locatable")
         
-        //let sortDescriptor = NSSortDescriptor(key: "\(objectsToShown!)", ascending: false)
-        //fetchRequest.sortDescriptors = [sortDescriptor]
-        
         do{
             try locatables = managedObjectContext?.executeFetchRequest(fetchRequest) as! [Locatable]
         }catch{
