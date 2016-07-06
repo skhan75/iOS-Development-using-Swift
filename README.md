@@ -17,7 +17,7 @@ Extras implemented :
 Extras implemented :
 
 1. "Insta" Conversions
-2. Unit abbreviations & "pretty" printing
+2. UIPolish
 
 ## ** MP/03-04 --> Project/Hackathon --> Camera Violations Analyzer **
 
