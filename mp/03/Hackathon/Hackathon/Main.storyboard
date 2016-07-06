@@ -25,7 +25,9 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rij-Po-Hda">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="76" id="HHS-K2-9YD"/>
+                                                <constraint firstAttribute="width" constant="76" id="HHS-K2-9YD">
+                                                    <variation key="widthClass=compact" constant="374"/>
+                                                </constraint>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,22 +37,36 @@
                                                     <exclude reference="HHS-K2-9YD"/>
                                                 </mask>
                                             </variation>
-                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                <rect key="frame" x="18" y="11" width="374" height="21"/>
+                                            <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="HHS-K2-9YD"/>
                                                 </mask>
                                             </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Rij-Po-Hda" firstAttribute="top" secondItem="YO5-fm-Y0A" secondAttribute="topMargin" constant="3" id="IIy-KW-p2Z"/>
+                                        <constraint firstItem="Rij-Po-Hda" firstAttribute="trailing" secondItem="YO5-fm-Y0A" secondAttribute="trailingMargin" id="iDX-yd-u11"/>
+                                        <constraint firstItem="Rij-Po-Hda" firstAttribute="centerY" secondItem="YO5-fm-Y0A" secondAttribute="centerY" id="k05-3S-Kzw"/>
+                                    </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="Rij-Po-Hda"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="IIy-KW-p2Z"/>
+                                            <exclude reference="iDX-yd-u11"/>
+                                            <exclude reference="k05-3S-Kzw"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
                                             <include reference="Rij-Po-Hda"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="IIy-KW-p2Z"/>
+                                            <include reference="iDX-yd-u11"/>
+                                            <include reference="k05-3S-Kzw"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

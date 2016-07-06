@@ -34,7 +34,6 @@ class MapBarController: UIViewController,MKMapViewDelegate{
         }
         
        loadCompleteMap()
-        //print(addressObj?.latitude)
         
     }
     
@@ -67,7 +66,5 @@ class MapBarController: UIViewController,MKMapViewDelegate{
         }
 
     }
-    
-    
     
 }
