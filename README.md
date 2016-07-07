@@ -36,7 +36,7 @@ Extras implemented :
 5. "Camera ID" --> you can search the database using a camera ID of your choice.
 6. Finally the last screen will be a Map View of your selected queries like Address, Violation Date, No of Violations will be displayed on the Map and will be highlighted using a Pin drop.
 
-<b> P.S.  Please excuse for the minor glitches and errors if you encounter any, because the project was done solely on my own and not in a group and hence due to lack of time and individual work, there could be some bugs or minor glitches. Please notify me of such issues which I will ensure to resolve immediately.
+<b> P.S.  Please excuse for the minor glitches and errors if you encounter any, because the project was done solely on my own and not in a group and hence due to lack of time and individual work, there could be some bugs or minor glitches. Please notify me of such issues which I will ensure to resolve immediately.</b>
 
 ## <b> MP/05 --> Simon Game </b>
 
